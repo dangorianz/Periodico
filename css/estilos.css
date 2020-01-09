@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.containerClimaTiempo{
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(0, 0, 0, .3);
+    /* background: grey; */
+}
+.containerClimaTiempo .container .ClimaTiempo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.containerClimaTiempo .container .ClimaTiempo .time{
+    height: 40px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    
+}
+.containerClimaTiempo .container .ClimaTiempo .time h6{
+    margin: 0;
+    margin-right: 15px;
+    
+}
+.containerClimaTiempo .container .ClimaTiempo .login a{
+    border-radius: 50%;
+    padding: 2px;
+    color: white;
+}
+.containerClimaTiempo .container .ClimaTiempo .login .twitter{
+    background: #00acee;
+}
+.containerClimaTiempo .container .ClimaTiempo .login .facebook{
+    background:  #3b5998;
+}
+.containerClimaTiempo .container .ClimaTiempo .login .linkedin{
+    background: #0e76a8;
+}
+.containerClimaTiempo .container .ClimaTiempo .login .instagram{
+    background: #3f729b;
+}
