@@ -1,11 +1,11 @@
 @font-face {
   font-family: 'fontello';
-  src: url('../font/fontello.eot?67706112');
-  src: url('../font/fontello.eot?67706112#iefix') format('embedded-opentype'),
-       url('../font/fontello.woff2?67706112') format('woff2'),
-       url('../font/fontello.woff?67706112') format('woff'),
-       url('../font/fontello.ttf?67706112') format('truetype'),
-       url('../font/fontello.svg?67706112#fontello') format('svg');
+  src: url('../font/fontello.eot?80372387');
+  src: url('../font/fontello.eot?80372387#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff2?80372387') format('woff2'),
+       url('../font/fontello.woff?80372387') format('woff'),
+       url('../font/fontello.ttf?80372387') format('truetype'),
+       url('../font/fontello.svg?80372387#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -15,7 +15,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?67706112#fontello') format('svg');
+    src: url('../font/fontello.svg?80372387#fontello') format('svg');
   }
 }
 */
@@ -54,7 +54,8 @@
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
- icon-facebook
+ 
+.icon-user:before { content: '\e800'; } /* '' */
 .icon-youtube-play:before { content: '\f16a'; } /* '' */
 .icon-twitter:before { content: '\f309'; } /* '' */
 .icon-facebook:before { content: '\f30c'; } /* '' */
