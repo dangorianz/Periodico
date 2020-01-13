@@ -115,8 +115,8 @@
     </section >
     <section class="section">
       <div class="container">
-        <div class="ultimasNoticias">
-          <div class="item">
+        <div id="containerUltimasCinco" class="ultimasNoticias">
+          <!-- <div class="item">
             <img src="img/noti1.jpg" alt="">
           </div>
           <div class="item">
@@ -134,7 +134,7 @@
           <div class="item">
             <img src="img/noti5.jpg" alt="">
             
-          </div>
+          </div> -->
         </div>
       </div>
       
@@ -146,44 +146,17 @@
           <div class="col col-8"> 
             <h1>Noticias Nuevas</h1>
             <!--Boton para agregar nuevo modal-->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Open modal for @mdo</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Agregar Nueva Nota</button>
             <!---->
-            <div class="masNoticias">
-              <div class="noticia">
-                <img src="img/noti16jpg.jpg" alt="">
-                <div class="InfoNoti">
-                  <a href="nodos/noticia.html"><h4 style="font-weight: bold; color: black;">Titulo de la Noticia</h4> </a>
-                  <h6 style="font-weight: bold;">Subtitulo de la Noticia</h6>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas tempora accusamus laudantium quasi praesentium quae ut eaque asperiores! Aliquid similique ex quo quod magnam! Asperiores, animi dolores. Voluptatibus, reprehenderit distinctio.</p>
-                </div>
-                <hr>
-              </div>
-              <div class="noticia">
-                <img src="img/noti1.jpg" alt="">
-                <div class="InfoNoti">
-                  <h4 style="font-weight: bold;">Titulo de la Noticia</h4>
-                  <h6 style="font-weight: bold;">Subtitulo de la Noticia</h6>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas tempora accusamus laudantium quasi praesentium quae ut eaque asperiores! Aliquid similique ex quo quod magnam! Asperiores, animi dolores. Voluptatibus, reprehenderit distinctio.</p>
-                </div>
-              </div>
-              <hr>
-              <div class="noticia">
-                <img src="img/noti1.jpg" alt="">
-                <div class="InfoNoti">
-                  <h4 style="font-weight: bold;">Titulo de la Noticia</h4>
-                  <h6 style="font-weight: bold;">Subtitulo de la Noticia</h6>
-                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas tempora accusamus laudantium quasi praesentium quae ut eaque asperiores! Aliquid similique ex quo quod magnam! Asperiores, animi dolores. Voluptatibus, reprehenderit distinctio.</p>
-                </div>
-              </div>
+            <div id="masNoticias" class="masNoticias">
+
               <hr>
             </div>
           </div>
           <div class="col col-4"></div>
         </div>
       </div>
-    </main>
-
-
+    </main> 
     <!--Modal de agregar nueva noticia-->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
@@ -267,5 +240,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="js/hora.js"></script>
     <script src="js/agregarNota.js"></script>
+    <script src="js/llenarInicio.js"></script>
 </body>
 </html>

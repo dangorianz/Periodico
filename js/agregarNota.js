@@ -39,4 +39,5 @@ $agregarNota.addEventListener('click',()=>{
         }).then(res => res.json())
         .catch(error => console.error('Error:', error))
         .then(response => alert('Nota Insertado'));
+        location.reload();
 })
