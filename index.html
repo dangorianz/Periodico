@@ -33,7 +33,9 @@
             <div class="row">
                 <div class="col col-4">
                     <figure>
+                      <a href="index.html">
                         <img src="img/Zona Norte blanco.jpg" alt="">
+                      </a>
                     </figure>
                 </div>
                 <div class="col col-8" style="background: #e0e0e0; padding: 0;">
@@ -67,19 +69,16 @@
         </div>
     </div>
     <section class="section">
-
         <div class="container" style="padding: 0;">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand" href="#">Inicio</a>
+                <a class="navbar-brand" href="index.html">Inicio</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
               
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
+                  
                     <li class="nav-item">
                       <a class="nav-link" href="#">Montero</a>
                     </li>
@@ -107,7 +106,8 @@
                     
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
-                    <a class="instagram" href="#"><i class="icon-user"></i></a>
+                    <button type="button" class="btn btn-primary" id="logearse" data-toggle="modal" data-target="#loginModal" data-whatever="@fat"><i class="icon-user"></i></button>
+                    <button class="cerrarSesion" id="cerrarSesion">Cerrar Sesion</button>
                   </form>
                 </div>
               </nav>
@@ -116,25 +116,6 @@
     <section class="section">
       <div class="container">
         <div id="containerUltimasCinco" class="ultimasNoticias">
-          <!-- <div class="item">
-            <img src="img/noti1.jpg" alt="">
-          </div>
-          <div class="item">
-            
-            <img src="img/noti2.jpg" alt="">
-          </div>
-          <div class="item">
-            
-            <img src="img/noti3.jpg" alt="">
-          </div>
-          <div class="item">
-            
-            <img src="img/noti4.jpg" alt="">
-          </div>
-          <div class="item">
-            <img src="img/noti5.jpg" alt="">
-            
-          </div> -->
         </div>
       </div>
       
@@ -146,7 +127,9 @@
           <div class="col col-8"> 
             <h1>Noticias Nuevas</h1>
             <!--Boton para agregar nuevo modal-->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Agregar Nueva Nota</button>
+            <div id="contBtnAgregarNota">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Agregar Nueva Nota</button>
+            </div>
             <!---->
             <div id="masNoticias" class="masNoticias">
 
@@ -208,6 +191,31 @@
         </div>
       </div>
     </div>
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Log In</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Usuario:</label>
+                <input type="text" class="form-control" id="usuarioLogin">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label">Contraseña:</label>
+                <input type="password" class="form-control" id="passLogin">
+              </div>
+              <button type="button" id="LogIn" class="btn btn-success">Ingresar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!---->
     <footer class="footer">
@@ -241,5 +249,7 @@
     <script src="js/hora.js"></script>
     <script src="js/agregarNota.js"></script>
     <script src="js/llenarInicio.js"></script>
+    <script src="js/log.js"></script>
+    <script src="js/verificarUsuario.js"></script>
 </body>
 </html>

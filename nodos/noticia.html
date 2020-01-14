@@ -34,7 +34,9 @@
             <div class="row">
                 <div class="col col-4">
                     <figure>
+                      <a href="../index.html">
                         <img src="../img/Zona Norte blanco.jpg" alt="">
+                      </a>
                     </figure>
                 </div>
                 <div class="col col-8" style="background: #e0e0e0; padding: 0;">
@@ -71,16 +73,14 @@
 
         <div class="container" style="padding: 0;">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand" href="#">Inicio</a>
+                <a class="navbar-brand" href="../index.html">Inicio</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                 </button>
               
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                   <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
+                    
                     <li class="nav-item">
                       <a class="nav-link" href="#">Montero</a>
                     </li>
@@ -144,7 +144,8 @@
       <div class="container">
         <div class="row">
           <div class="col col-8"> 
-            <h1>Titulo de La Noticia</h1>
+            <h1 id="tituloNota">Titulo de La Noticia</h1>
+            <h3 id="subtituloNota">Titulo de La Noticia</h3>
             <div class="masNoticias">
                 <div class="containerRedesSociales">
                     <a class="twitter" href="#"><i class="icon-twitter"></i></a>
@@ -153,50 +154,21 @@
                     <a class="instagram" href="#"><i class="icon-instagram"></i></a>
                 </div>
               <hr>
-              <img src="../img/noti1.jpg" alt="">
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quam repellendus nemo. Laudantium dicta esse provident iste. Incidunt suscipit architecto assumenda, amet quibusdam autem. Voluptatem a et ullam enim cum!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero eligendi deleniti accusamus eveniet temporibus ipsum porro in? Officiis, tempore tenetur?</p>
+              <img id="imgNota" src="../img/noti1.jpg" alt="">
+              <p id="textoNota">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quam repellendus nemo. Laudantium dicta esse provident iste. Incidunt suscipit architecto assumenda, amet quibusdam autem. Voluptatem a et ullam enim cum!</p>
+                
                 <hr>
                 <h4>Comentarios</h4>
                 <hr>
-                <div class="containerComentarios">
-                    <div class="comentario">
-                        <figure>
-                            <img src="../img/dan.jpg" alt="">
-                        </figure>
-                        <div class="textoComentario">
-                            <h6>Nombre Usuario <span><small>11/01/2020</small></span><small></small></h6>
-                            
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus commodi sequi saepe modi porro unde, laborum harum sunt odit consectetur!</p>
-                        </div>
-                    </div>
-                    <div class="comentario">
-                        <figure>
-                            <img src="../img/dan.jpg" alt="">
-                        </figure>
-                        <div class="textoComentario">
-                            <h6>Nombre Usuario <span><small>11/01/2020</small></span><small></small></h6>
-                            
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint, ut?</p>
-                        </div>
-                    </div>
-                    <div class="comentario">
-                        <figure>
-                            <img src="../img/dan.jpg" alt="">
-                        </figure>
-                        <div class="textoComentario">
-                            <h6>Nombre Usuario <span><small>11/01/2020</small></span><small></small></h6>
-                            
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis culpa, eveniet fuga sapiente dignissimos impedit quidem suscipit laboriosam neque molestias doloremque, cumque id accusamus et quo voluptatum nostrum ex dolorem!</p>
-                        </div>
-                    </div>
+                <div id="containerComentarios" class="containerComentarios">
+                    
                 </div>
                 <h4>Dejar Comentario</h4>
                 <hr>
                 <form action="">
-                    <textarea name="" id="" cols="30" rows="5" placeholder="Comentario..."></textarea>
-                    <input type="text" class="nombreComentario" name="" id="" placeholder="Nombre..">
-                    <input type="submit" class="btnComentario" value="Comentar">
+                    <textarea name="" id="comentarioNoticia" cols="30" rows="5" placeholder="Comentario..."></textarea>
+                    <input type="text" class="nombreComentario" name="" id="nombreC" placeholder="Nombre..">
+                    <input type="submit" id="btnComentar" class="btnComentario" value="Comentar">
                 </form>
             </div>
         </div>
@@ -233,5 +205,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="../js/hora.js"></script>
+    <script src="../js/nota.js"></script>
 </body>
 </html>
