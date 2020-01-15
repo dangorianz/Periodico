@@ -5,6 +5,12 @@
 }
 .bg-dark{
     background: #222930 !important;
+    padding: 0 10px;
+}
+
+.collapse.navbar-collapse .navbar-nav.mr-auto .nav-link{
+
+    padding: 10px;
 }
 .containerClimaTiempo{
     width: 100%;
@@ -119,6 +125,19 @@
     color: white;
     font-weight: bold;
     border-radius: 10px;
+}
+.section .container .ultimasNoticias .item .ultima{
+    position: absolute;
+    top: 5%;
+    right: 0;
+    background: #222930;
+    font-size: 12px;
+    padding: 2px 8px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px 0px 0px 5px ;
+    bottom: auto;
+    left: auto;
 }
 .section .container .ultimasNoticias .item h5{
     position: absolute;

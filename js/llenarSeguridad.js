@@ -4,13 +4,13 @@
         const data = await response.json();
         return data;
     }
-    const $listaNoticias= await getUltimasNoticias(`http://localhost:3000/api/obtenerUltimasCinco`);
+    const $listaNoticias= await getUltimasNoticias(`http://localhost:3000/api/obtenerUltimasCincoSeguridad`);
     // debugger
     function NoticiasItemTemplate(noticia){
         return `<div class="item">
                     <h6>${noticia.nombrecategoria}</h6>
                     <h5 class="ultima">Ultimas Noticia</h5>
-                    <a href="nodos/noticia.html">
+                    <a href="noticia.html">
                         <img src="${noticia.fotografia}" alt="">
                         <h4>${noticia.titulo}</h4>
                     </a>
@@ -58,7 +58,7 @@
         const data = await response.json();
         return data;
     }
-    const $listaNotas= await getOtrasNotas(`http://localhost:3000/api/obtenerOtrasNotas`);
+    const $listaNotas= await getOtrasNotas(`http://localhost:3000/api/obtenerOtrasNotasSeguridad`);
     // debugger
     function NotaItemTemplate(nota){
         return `<div class="noticia">

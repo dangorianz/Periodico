@@ -12,9 +12,9 @@
 .main .container .masNoticias form{
     padding: 20px;
 }
-.main .container .masNoticias form .btnComentario{
+.main .container .masNoticias .btnComentario{
     display: block;
-    margin: 10px 0;
+    margin: 10px 20px;
     border-radius: 10px;
     border: none;
     padding: 5px 10px;
@@ -66,6 +66,7 @@
     font-size: 14px;
     font-weight: bold;
 }
+
 .main .container .masNoticias .containerComentarios .comentario .textoComentario p{
     padding: 10px 0;
     font-size: 13px;
