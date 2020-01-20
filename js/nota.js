@@ -2,6 +2,7 @@ document.getElementById('imgNota').src=localStorage.getItem('foto');
 document.getElementById('textoNota').textContent=localStorage.getItem('texto');
 document.getElementById('tituloNota').textContent=localStorage.getItem('titulo');
 document.getElementById('subtituloNota').textContent=localStorage.getItem('subtitulo');
+document.getElementById('textNotaLarga').textContent=localStorage.getItem('notalarga');
 // document.getElementById('tituloNota').textContent=localStorage.getItem('titulo');
 
 (async function cargarComentarios(){
@@ -10,6 +11,7 @@ document.getElementById('subtituloNota').textContent=localStorage.getItem('subti
         const data = await response.json();
         return data;
     }
+    // const $listaComentarios= await getComentarios(`https://diarionuevonorte.herokuapp.com/api/obtenerCometarios/${localStorage.getItem('idnoticia')}`);
     const $listaComentarios= await getComentarios(`http://localhost:3000/api/obtenerCometarios/${localStorage.getItem('idnoticia')}`);
     // debugger
     function ComentariosItemTemplate(comentario){
@@ -21,6 +23,7 @@ document.getElementById('subtituloNota').textContent=localStorage.getItem('subti
                         <h6>${comentario.nombrepersona}  - <span><small>${comentario.fecha.substr(0,10)}</small></span><small></small></h6>
                         
                         <p>${comentario.texto}</p>
+                        
                     </div>
                 </div>`;
     }
@@ -56,6 +59,7 @@ document.getElementById('btnComentar').addEventListener('click',()=>{
     var t = new Date;
     let fecha = `${t.getFullYear()}-${t.getMonth()+1}-${t.getDate()}`
 
+    // const url = 'https://diarionuevonorte.herokuapp.com/api/IngresarComentario'
     const url = 'http://localhost:3000/api/IngresarComentario'
         const data = {};
         data.texto = document.getElementById('comentarioNoticia').value
@@ -72,6 +76,6 @@ document.getElementById('btnComentar').addEventListener('click',()=>{
             }
         }).then(res => res.json())
         .catch(error => console.error('Error:', error))
-        .then(response => alert('Nota Insertado'));
-        location.reload()
+        .then(response => location.reload());
+        
 })

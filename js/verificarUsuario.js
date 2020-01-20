@@ -8,7 +8,8 @@ if(localStorage.getItem('rol') != 1){
 if(localStorage.getItem('rol') == ""){
     $cerrarSesion.style.display='none'
     $logearse.style.display='block'
-}else{
+}
+if(localStorage.getItem('rol')== 1){
     $cerrarSesion.style.display='block'
     $logearse.style.display='none'
 }

@@ -44,6 +44,13 @@
     transition: .3s;
     will-change: transform;
 }
+.containerClimaTiempo .container .ClimaTiempo .logos{
+    
+    background: white;
+    padding: 3px;
+    border-radius: 10px;
+
+}
 .containerClimaTiempo .container .ClimaTiempo .logos a:hover{
     font-size: 18px;
 }
@@ -58,6 +65,12 @@
 }
 .containerClimaTiempo .container .ClimaTiempo .logos .instagram{
     background: #3f729b;
+}
+.containerClimaTiempo .container .ClimaTiempo .logos .youtube{
+    background: #c4302b;
+}
+.containerClimaTiempo .container .ClimaTiempo .logos .whatsapp{
+    background: #00bb2d;
 }
 /*--------------------------*/
 .containerLogopubli{
@@ -99,10 +112,18 @@
     background: grey;
     position: relative;
 }
+.section .container .ultimasNoticias .item:nth-of-type(1) a h4{
+    font-size: 50px;
+}
 .section .container .ultimasNoticias .item a h4{
+    text-shadow: -2px 4px 3px #222930;
     color: white;
     font-weight: 900;
     /* -webkit-text-stroke: px black; */
+}
+.section .container .ultimasNoticias .item a h4:hover{
+    text-decoration: underline;
+    color: #C21812;
 }
 .section .container .ultimasNoticias .item:nth-of-type(1){
     /* background: blue; */
@@ -126,18 +147,16 @@
     font-weight: bold;
     border-radius: 10px;
 }
-.section .container .ultimasNoticias .item .ultima{
+.section .container .ultimasNoticias .item .imgUltimaNoticia{
     position: absolute;
-    top: 5%;
+    width: 30%;
+    height: 15%;
     right: 0;
-    background: #222930;
-    font-size: 12px;
-    padding: 2px 8px;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px 0px 0px 5px ;
-    bottom: auto;
-    left: auto;
+    top: 5%;
+    display: none;
+}
+.section .container .ultimasNoticias .item:nth-of-type(1) .imgUltimaNoticia{
+    display: block;
 }
 .section .container .ultimasNoticias .item h5{
     position: absolute;
@@ -147,8 +166,31 @@
 }
 .section .container .ultimasNoticias .item h4{
     position: absolute;
-    bottom: 0;
+    bottom: 10%;
     left: 5%;
+}
+.section .container .ultimasNoticias .item .quienPublico{
+    position: absolute;
+    margin: 0;
+    bottom: 0;
+    background: black;
+    /* display: block; */
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+    padding: 2px 10px;
+}
+.section .container .ultimasNoticias .item:nth-of-type(1) .quienPublico{
+
+    background: black;
+    /* display: block; */
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 2px 10px;
+    
 }
 
 /*==========================================*/
@@ -176,6 +218,28 @@
     width: auto;
     display: inline-block;
     border-radius: 10px;
+}
+
+.main .container .card .card-header{
+    background: #222930;
+}
+.main .container .card .card-header h2{
+    color: white; 
+    font-weight: bold; 
+    padding: 10px 0; 
+    margin: 0; 
+    text-align: center;
+}
+.main .container .card .card-body img{
+    width: 100%;
+}
+.main .container .card .card-body figure img{
+    width: 45%;
+    display: inline-block;
+    float: left;
+    border: 1px solid rgba(0,0,0,.3);
+    padding: 0;
+    margin-right: 10px;
 }
 /*========================================*/
 

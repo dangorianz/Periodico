@@ -4,15 +4,17 @@
         const data = await response.json();
         return data;
     }
+    // const $listaNoticias= await getUltimasNoticias(`https://diarionuevonorte.herokuapp.com/api/obtenerUltimasCinco`);
     const $listaNoticias= await getUltimasNoticias(`http://localhost:3000/api/obtenerUltimasCinco`);
     // debugger
     function NoticiasItemTemplate(noticia){
         return `<div class="item">
                     <h6>${noticia.nombrecategoria}</h6>
-                    <h5 class="ultima">Ultimas Noticia</h5>
+                    <img class="imgUltimaNoticia" src='img/ultimaNoticia.png'>
                     <a href="nodos/noticia.html">
                         <img src="${noticia.fotografia}" alt="">
                         <h4>${noticia.titulo}</h4>
+                        <p class="quienPublico">por ${noticia.nombres} ${noticia.apellidos}</p>
                     </a>
                 </div>`;
     }
@@ -28,6 +30,7 @@
             localStorage.setItem('titulo',`${$nota.titulo}`);
             localStorage.setItem('subtitulo',`${$nota.subtitulo}`);
             localStorage.setItem('texto',`${$nota.texto}`);
+            localStorage.setItem('notalarga',`${$nota.notalarga}`);
             localStorage.setItem('foto',`${$nota.fotografia}`);
             localStorage.setItem('frase',`${$nota.frase}`);
             localStorage.setItem('fecha',`${$nota.fecha}`);
@@ -58,6 +61,7 @@
         const data = await response.json();
         return data;
     }
+    // const $listaNotas= await getOtrasNotas(`https://diarionuevonorte.herokuapp.com/api/obtenerOtrasNotas`);
     const $listaNotas= await getOtrasNotas(`http://localhost:3000/api/obtenerOtrasNotas`);
     // debugger
     function NotaItemTemplate(nota){
@@ -69,6 +73,7 @@
                         <small>${nota.fecha.substr(0,10)}</small>
                         <h5>${nota.nombrecategoria}</h5>
                         <p>${nota.texto}</p>
+                        <em style="display:block; font-size:12px; font-weight:bold; text-decoration: underline;">por: ${nota.nombres} ${nota.apellidos}</em>
                     </div>
                     <hr>
                 </div>`;

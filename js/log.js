@@ -6,6 +6,7 @@ async function logear(nombreUsuario, passUsuario){
         const data = await response.json();
         return data;
     }
+    // const $listaRoles= await getData(`https://diarionuevonorte.herokuapp.com/api/obtenerUsuario/${nombreUsuario}/${passUsuario}`);
     const $listaRoles= await getData(`http://localhost:3000/api/obtenerUsuario/${nombreUsuario}/${passUsuario}`);
     // debugger
     if($listaRoles.data.length != 0){

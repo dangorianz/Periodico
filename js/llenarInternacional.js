@@ -4,17 +4,19 @@
         const data = await response.json();
         return data;
     }
+    // const $listaNoticias= await getUltimasNoticias(`https://diarionuevonorte.herokuapp.com/api/obtenerUltimasCincoInternacional`);
     const $listaNoticias= await getUltimasNoticias(`http://localhost:3000/api/obtenerUltimasCincoInternacional`);
     // debugger
     function NoticiasItemTemplate(noticia){
         return `<div class="item">
-                    <h6>${noticia.nombrecategoria}</h6>
-                    <h5 class="ultima">Ultimas Noticia</h5>
-                    <a href="noticia.html">
-                        <img src="${noticia.fotografia}" alt="">
-                        <h4>${noticia.titulo}</h4>
-                    </a>
-                </div>`;
+        <h6>${noticia.nombrecategoria}</h6>
+        <img class="imgUltimaNoticia" src='img/ultimaNoticia.png'>
+        <a href="nodos/noticia.html">
+            <img src="${noticia.fotografia}" alt="">
+            <h4>${noticia.titulo}</h4>
+            <p class="quienPublico">por ${noticia.nombres} ${noticia.apellidos}</p>
+        </a>
+    </div>`;
     }
     function createTemplate(HTMLString){
         const $html = document.implementation.createHTMLDocument();
@@ -58,7 +60,8 @@
         const data = await response.json();
         return data;
     }
-    const $listaNotas= await getOtrasNotas(`http://localhost:3000/api/obtenerOtrasNotasInternacional`);
+    // const $listaNotas= await getOtrasNotas(`https://diarionuevonorte.herokuapp.com/obtenerOtrasNotasInternacional`);
+    const $listaNotas= await getOtrasNotas(`http://localhost:3000/obtenerOtrasNotasInternacional`);
     // debugger
     function NotaItemTemplate(nota){
         return `<div class="noticia">

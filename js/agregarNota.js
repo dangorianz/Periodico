@@ -19,15 +19,18 @@ $agregarNota.addEventListener('click',()=>{
     var t = new Date;
     let fecha = `${t.getFullYear()}-${t.getMonth()+1}-${t.getDate()}`
 
+    // const url = 'https://diarionuevonorte.herokuapp.com/api/IngresarNota'
     const url = 'http://localhost:3000/api/IngresarNota'
         const data = {};
         data.titulo = document.getElementById('tituloNota').value
         data.subtitulo = document.getElementById('subtituloNota').value
         data.texto = document.getElementById('textoNota').value
+        data.notalarga = document.getElementById('textoNotaLarga').value
         data.fotografia = fotoNota;
         data.frase = "Prueba Frase";
         data.fecha = fecha;
         data.idCategoria = document.getElementById('categoriaNota').value
+        data.idUsu = localStorage.getItem('idUsuario')
 
         let JSO = JSON.stringify(data)
         fetch(url, {
@@ -38,6 +41,6 @@ $agregarNota.addEventListener('click',()=>{
             }
         }).then(res => res.json())
         .catch(error => console.error('Error:', error))
-        .then(response => alert('Nota Insertado'));
-        location.reload();
+        .then(response => location.reload());
+        
 })
