@@ -113,7 +113,7 @@
     position: relative;
 }
 .section .container .ultimasNoticias .item:nth-of-type(1) a h4{
-    font-size: 50px;
+    font-size: 40px;
 }
 .section .container .ultimasNoticias .item a h4{
     text-shadow: -2px 4px 3px #222930;
@@ -122,8 +122,8 @@
     /* -webkit-text-stroke: px black; */
 }
 .section .container .ultimasNoticias .item a h4:hover{
-    text-decoration: underline;
-    color: #C21812;
+
+    /* color: #C21812; */
 }
 .section .container .ultimasNoticias .item:nth-of-type(1){
     /* background: blue; */
@@ -197,6 +197,11 @@
 .main{
     margin: 20px 0;
 }
+.main .container{
+    border-right: 1px solid rgba(126, 126, 126, 0.3);
+    border-left: 1px solid rgba(125, 125, 125, 0.3);
+
+}
 .main .container .masNoticias .noticia{
     display: grid;
     grid-template-columns: 30% 70%;
@@ -205,6 +210,7 @@
 .main .container .masNoticias .noticia img{
     width: 100%;
     margin-top: 5px;
+    
 }
 .main .container .masNoticias .noticia .InfoNoti p{
     margin: 0;
@@ -226,7 +232,7 @@
 .main .container .card .card-header h2{
     color: white; 
     font-weight: bold; 
-    padding: 10px 0; 
+    /* padding: 10px 0;  */
     margin: 0; 
     text-align: center;
 }
@@ -240,6 +246,43 @@
     border: 1px solid rgba(0,0,0,.3);
     padding: 0;
     margin-right: 10px;
+}
+.main .publiIzquierda{
+    width: 12%;
+    position: fixed;
+    top: 20%;
+    left: 0;
+    max-height: 50%;
+}
+.main .publiDerecha{
+    width: 12%;
+    position: fixed;
+    top: 20%;
+    right: 0;
+    max-height: 50%;
+    
+}
+.main .publiIzquierda img{
+    width: 100%;
+}
+.main .container .card .card-header span .circulo{
+    width: 15px;
+    height: 15px;
+    background: red;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 50%;
+
+    animation-name: REC;
+    animation-duration: 1.5s;            
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+    
+}
+.main .publiDerecha img{
+    width: 100%;
+    
 }
 /*========================================*/
 
@@ -281,3 +324,19 @@
 .footer .container .redes a .icon-instagram:hover{
     background: #3f729b;
 }
+
+/*ANIMACIONES*/
+@keyframes REC{
+    0%{
+        background: rgb(255, 0, 0);
+        /* opacity: 1; */
+    }
+    /* 50%{
+        opacity: 0;
+    } */
+    100%{
+        /* opacity: 0; */
+        background: rgba(120, 0, 0, 0.666);
+    }
+}
+/**/

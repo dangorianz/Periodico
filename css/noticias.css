@@ -94,3 +94,28 @@
 .main .container .masNoticias .instagram{
     background: #3f729b;
 }
+.main .container .masNoticias .youtube{
+    background: #c4302b;
+}
+.main .container .masNoticias .whatsapp{
+    background: #00bb2d;
+}
+
+/*Quienes Somos*/
+.main .container .col.col-3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.main .container figure{
+    width: 50%; 
+    border: 2px solid rgb(226, 226, 226);
+    border-radius: 50%;
+}
+.main .container figure img{
+    border: 7px solid rgba(233, 233, 233, 0.2);
+    padding: 0;
+    border-radius: 50%;
+}

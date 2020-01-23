@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/icon-twitter.css">
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="shortcut icon" href="img/Zona Norte blanco.ico" />
-    <title>Zona Norte</title>
+    <title>Zona Norte | Portada</title>
 </head>
 <body>
     <section class="containerClimaTiempo">
@@ -34,7 +34,7 @@
     <section class="containerLogopubli">
         <div class="container">
             <div class="row">
-                <div class="col col-4">
+                <div style="display: flex; justify-content: center; align-items: center;" class="col col-4">
                     <figure>
                       <a href="index.html">
                         <img src="img/Zona Norte blanco.jpg" alt="">
@@ -50,8 +50,11 @@
                           
                         </ol>
                         <div id="containerCarrousel" class="carousel-inner" style="height: inherit;">
-                          <div class="carousel-item active">
-                            <img src="" class="d-block w-100" alt="...">
+                          <div style="display:none !important; visibility: hidden; opacity: 0;" class="carousel-item active">
+                            <img src="img/noti1.jpg" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="img/noti2.jpg" class="d-block w-100" alt="...">
                           </div>
                           
                         </div>
@@ -63,7 +66,8 @@
                           <span class="carousel-control-next-icon" aria-hidden="true"></span>
                           <span class="sr-only">Next</span>
                         </a>
-                      </div></div>
+                      </div>
+                  </div>
             </div>
         </div>
     </div>
@@ -100,7 +104,7 @@
                       <a class="nav-link" href="nodos/Nacional.html">Nacional</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="nodos//Internacional.html">Internacional</a>
+                      <a class="nav-link" href="nodos/Internacional.html">Internacional</a>
                     </li>
                     
                   </ul>
@@ -145,60 +149,71 @@
               </div>
             </div>
             <hr>
-            <div class="card">
-              <div class="card-header bg-dark">
-               <h2 >Comentarios</h2>
+            <div class="accordion" id="accordionExample">
+              <div class="card">
+                <div style="position: relative;" class="card-header" id="headingOne">
+                  <h2 class="mb-0">
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <h2 style="text-align: center;">Comentarios </h2>
+                      <img style="position: absolute;
+                      top: 40%;
+                      right: 5%;
+                      width: 7%;" src="img/arrow.png" alt=""> 
+                    </button>
+                  </h2>
+                </div>
+            
+                <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+                  <div  class="card-body">
+                    <div>
+                      <p style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellendus repellat possimus. Fuga vitae sunt incidunt perferendis aut sapiente placeat!</p>
+                      <hr>
+                    </div>
+                    <div>
+                      <p style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt repellendus repellat possimus. Fuga vitae sunt incidunt perferendis aut sapiente placeat!</p>
+                      <hr>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="card-body" style="height: 400px;
-              overflow: scroll;
-              overflow-x: hidden;">
-                <div class="comentario">
-                  <img src="img/dan.jpg" style="float: left; width: 25%; margin-right: 5px;" alt="">
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum, molestias?</p>
-                  <hr>
-                </div>
-                <div class="comentario">
-                  <img src="img/dan.jpg" style="float: left; width: 25%; margin-right: 5px;" alt="">
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum, molestias?</p>
-                  <hr>
-                </div>
-                <div class="comentario">
-                  <img src="img/dan.jpg" style="float: left; width: 25%; margin-right: 5px;" alt="">
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum, molestias?</p>
-                  <hr>
-                </div>
-                <div class="comentario">
-                  <img src="img/dan.jpg" style="float: left; width: 25%; margin-right: 5px;" alt="">
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum, molestias?</p>
-                  <hr>
-                </div>
-                <div class="comentario">
-                  <img src="img/dan.jpg" style="float: left; width: 25%; margin-right: 5px;" alt="">
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum, molestias?</p>
-                  <hr>
-                </div>
-                <div class="comentario">
-                  <img src="img/dan.jpg" style="float: left; width: 25%; margin-right: 5px;" alt="">
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum, molestias?</p>
-                  <hr>
-                </div>
-                
-                
-
-              </div>
+              
             </div>
             <hr>
-            <div class="card" style="">
-              <img src="img/noti6.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <div class="title">
-                  <h6 style="color: #C21812; font-weight: bold; text-decoration: underline;">Editorial</h6>
-                </div>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div  class="card">
+              <div class="card-header">
+                <h3 style="color: white; font-weight: bold; text-align: right; margin: 0;"><span style="
+vertical-align: text-bottom;"><div style="margin-right: 2%;" class="circulo"></div></span>Live</h3>
               </div>
+              
+              <!-- <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FATBRadio%2Fvideos%2F1321772301348869%2F&show_text=1&width=560" width="100%" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe> -->
+              <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcnnchile%2Fvideos%2F2768464603238256%2F&show_text=0&width=560" width="100%" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+            </div>
+            <hr>
+            <div class="card">
+              <a style="color: black; text-decoration: none; cursor: pointer;" href="nodos/editorial.html">
+                <img src="img/noti6.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <div class="title">
+                      <h6 style="color: #C21812; font-weight: bold;">Editorial</h6>
+  
+  
+                  </div>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+
+              </a>
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="publiIzquierda">
+        <img src="img/larga_distancia.jpg" alt="">
+        
+      </div>
+      <div class="publiDerecha">
+        <img src="img/tacobell.jpg" alt="">
+        
       </div>
     </main> 
     <!--Modal de agregar nueva noticia-->
@@ -266,7 +281,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form>
+            <form action="/test" method="POST">
               <div class="form-group">
                 <label for="recipient-name" class="col-form-label">Usuario:</label>
                 <input type="text" class="form-control" id="usuarioLogin">
@@ -288,19 +303,31 @@
         <div class="row">
           <div class="col col-4">
             <img src="img/Zona Norte negro.jpg" alt="">
-            <p>Zona Norte es su sitio web de noticias, entretenimiento, moda musical. Le proporcionamos las últimas noticias y videos de última hora directamente de la industria del entretenimiento.</p>
+            <p>Zona Norte, se presenta como un aporte a esa construcción de nuevos medios que desarrollen un tipo de periodismo, donde la ética, responsabilidad y veracidad de sus contenidos, sean los pilares del trabajo en todas sus áreas.</p>
+            
+          </div>
+          <div class="col col-4">
+            <h2 style="color: white; margin-top: 28px;">Contactanos</h2>
             <p>
-              Contactanos: <span><a href="">email@gmail.com</a> </span>
+              Nombre: <span><a href="">email@gmail.com</a> </span>
+            </p>
+            <p>
+              Nombre: <span><a href="">email@gmail.com</a> </span>
+            </p>
+            <p>
+              Nombre: <span><a href="">email@gmail.com</a> </span>
             </p>
             <div class="redes">
-                <a class="twitter" href="#"><i class="icon-twitter"></i></a>
-                <a class="facebook" href="#"><i class="icon-facebook"></i></a>
-                <a class="linkedin" href="#"><i class="icon-linkedin"></i></a>
-                <a class="instagram" href="#"><i class="icon-instagram"></i></a>
+              <a class="twitter" href="#"><i class="icon-twitter"></i></a>
+              <a class="facebook" href="#"><i class="icon-facebook"></i></a>
+              <a class="linkedin" href="#"><i class="icon-linkedin"></i></a>
+              <a class="instagram" href="#"><i class="icon-instagram"></i></a>
             </div>
             
           </div>
-          <div class="col col-8">
+          <div class="col col-4">
+            <h2 style="color: white; margin-top: 28px;">¿Quienes Somos?</h2>
+            <a href="nodos/quienesSomos.html">Visitanos</a>
 
           </div>
         </div>
