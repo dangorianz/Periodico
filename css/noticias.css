@@ -47,20 +47,25 @@
     border-bottom: 1px solid rgba(0,0,0,.05);
     margin-bottom: 20px;
 }
-.main .container .masNoticias .containerComentarios .comentario figure{
+.main .container .masNoticias .containerComentarios .comentario .containerfotocomentario{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
     position: relative;
+    border: none;
 }
-.main .container .masNoticias .containerComentarios .comentario figure img{
-    padding-top: 0;
-    width: 80%;
+.main .container .masNoticias .containerComentarios .comentario .containerfotocomentario .fotoComentario{
+    width: 58%;
     border-radius: 50%;
     position: absolute;
-    top: 5%;
+    /* top: 0; */
+    padding: 0;
+    padding-top: 0;
+    box-sizing: content-box;
+    bottom: 5px;
+    border: 0;
 }
 .main .container .masNoticias .containerComentarios .comentario .textoComentario h6{
     font-size: 14px;

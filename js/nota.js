@@ -11,13 +11,13 @@ document.getElementById('textNotaLarga').textContent=localStorage.getItem('notal
         const data = await response.json();
         return data;
     }
-    // const $listaComentarios= await getComentarios(`https://diarionuevonorte.herokuapp.com/api/obtenerCometarios/${localStorage.getItem('idnoticia')}`);
-    const $listaComentarios= await getComentarios(`http://localhost:3000/api/obtenerCometarios/${localStorage.getItem('idnoticia')}`);
+    const $listaComentarios= await getComentarios(`https://diarionuevonorte.herokuapp.com/api/obtenerCometarios/${localStorage.getItem('idnoticia')}`);
+    // const $listaComentarios= await getComentarios(`http://localhost:3000/api/obtenerCometarios/${localStorage.getItem('idnoticia')}`);
     // debugger
     function ComentariosItemTemplate(comentario){
         return `<div class="comentario">
-                    <figure>
-                        <img src="../img/dan.jpg" alt="">
+                    <figure class="containerfotocomentario">
+                        <img class="fotoComentario" src="../img/dan.jpg" alt="">
                     </figure>
                     <div class="textoComentario">
                         <h6>${comentario.nombrepersona}  - <span><small>${comentario.fecha.substr(0,10)}</small></span><small></small></h6>
@@ -59,8 +59,8 @@ document.getElementById('btnComentar').addEventListener('click',()=>{
     var t = new Date;
     let fecha = `${t.getFullYear()}-${t.getMonth()+1}-${t.getDate()}`
 
-    // const url = 'https://diarionuevonorte.herokuapp.com/api/IngresarComentario'
-    const url = 'http://localhost:3000/api/IngresarComentario'
+    const url = 'https://diarionuevonorte.herokuapp.com/api/IngresarComentario'
+    // const url = 'http://localhost:3000/api/IngresarComentario'
         const data = {};
         data.texto = document.getElementById('comentarioNoticia').value
         data.nombrepersona = document.getElementById('nombreC').value

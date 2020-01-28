@@ -4,8 +4,8 @@
         const data = await response.json();
         return data;
     }
-    // const $listaNoticias= await getUltimasNoticias(`https://diarionuevonorte.herokuapp.com/api/obtenerUltimasCincoSociales`);
-    const $listaNoticias= await getUltimasNoticias(`http://localhost:3000/api/obtenerUltimasCincoSociales`);
+    const $listaNoticias= await getUltimasNoticias(`https://diarionuevonorte.herokuapp.com/api/obtenerUltimasCincoSociales`);
+    // const $listaNoticias= await getUltimasNoticias(`http://localhost:3000/api/obtenerUltimasCincoSociales`);
     // debugger
     function NoticiasItemTemplate(noticia){
         return `<div class="item">
@@ -60,8 +60,8 @@
         const data = await response.json();
         return data;
     }
-    // const $listaNotas= await getOtrasNotas(`https://diarionuevonorte.herokuapp.com/api/obtenerOtrasNotasSociales`);
-    const $listaNotas= await getOtrasNotas(`http://localhost:3000/api/obtenerOtrasNotasSociales`);
+    const $listaNotas= await getOtrasNotas(`https://diarionuevonorte.herokuapp.com/api/obtenerOtrasNotasSociales`);
+    // const $listaNotas= await getOtrasNotas(`http://localhost:3000/api/obtenerOtrasNotasSociales`);
     // debugger
     function NotaItemTemplate(nota){
         return `<div class="noticia">

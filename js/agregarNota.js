@@ -19,8 +19,8 @@ $agregarNota.addEventListener('click',()=>{
     var t = new Date;
     let fecha = `${t.getFullYear()}-${t.getMonth()+1}-${t.getDate()}`
 
-    // const url = 'https://diarionuevonorte.herokuapp.com/api/IngresarNota'
-    const url = 'http://localhost:3000/api/IngresarNota'
+    const url = 'https://diarionuevonorte.herokuapp.com/api/IngresarNota'
+    // const url = 'http://localhost:3000/api/IngresarNota'
         const data = {};
         data.titulo = document.getElementById('tituloNota').value
         data.subtitulo = document.getElementById('subtituloNota').value
