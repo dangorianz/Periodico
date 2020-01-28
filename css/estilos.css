@@ -113,7 +113,7 @@
     position: relative;
 }
 .section .container .ultimasNoticias .item:nth-of-type(1) a h4{
-    font-size: 40px;
+    font-size: 25px;
 }
 .section .container .ultimasNoticias .item a h4{
     text-shadow: -2px 4px 3px #222930;
@@ -123,7 +123,7 @@
 }
 .section .container .ultimasNoticias .item a h4:hover{
 
-    /* color: #C21812; */
+    color: #C21812;
 }
 .section .container .ultimasNoticias .item:nth-of-type(1){
     /* background: blue; */
