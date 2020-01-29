@@ -30,7 +30,7 @@ $agregarNota.addEventListener('click',()=>{
         data.frase = "Prueba Frase";
         data.fecha = fecha;
         data.idCategoria = document.getElementById('categoriaNota').value
-        data.idUsu = localStorage.getItem('idUsuario')
+        data.idUsu = sessionStorage.getItem('idUsuario')
 
         let JSO = JSON.stringify(data)
         fetch(url, {

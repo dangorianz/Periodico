@@ -26,14 +26,14 @@
     function addEventClick($element,$nota) {
         debugger
         $element.addEventListener('click', () => {
-            localStorage.setItem('idnoticia',`${$nota.idnoticia}`);
-            localStorage.setItem('titulo',`${$nota.titulo}`);
-            localStorage.setItem('subtitulo',`${$nota.subtitulo}`);
-            localStorage.setItem('texto',`${$nota.texto}`);
-            localStorage.setItem('foto',`${$nota.fotografia}`);
-            localStorage.setItem('frase',`${$nota.frase}`);
-            localStorage.setItem('fecha',`${$nota.fecha}`);
-            localStorage.setItem('nombrecat',`${$nota.nombrecategoria}`);
+            sessionStorage.setItem('idnoticia',`${$nota.idnoticia}`);
+            sessionStorage.setItem('titulo',`${$nota.titulo}`);
+            sessionStorage.setItem('subtitulo',`${$nota.subtitulo}`);
+            sessionStorage.setItem('texto',`${$nota.texto}`);
+            sessionStorage.setItem('foto',`${$nota.fotografia}`);
+            sessionStorage.setItem('frase',`${$nota.frase}`);
+            sessionStorage.setItem('fecha',`${$nota.fecha}`);
+            sessionStorage.setItem('nombrecat',`${$nota.nombrecategoria}`);
             // getComentarios(`http://localhost:3000/api/EliminarComentario/${$comentario.idcomentario}`);
             // alert(`comentario Eliminado`)
             // location.reload();
@@ -52,6 +52,29 @@
     }
     const $containerNoticias = document.getElementById('containerUltimasCinco')
     renderNoticiaList($listaNoticias, $containerNoticias)
+})();
+(async function cargarUltimaEditorial(){
+    async function getUltimaEditorial(url) {
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+    }
+    // const $listaNotas= await getUltimaEditorial(`https://diarionuevonorte.herokuapp.com/api/obtenerUltimaEditorial`);
+    const $UltimaEditorial= await getUltimaEditorial(`http://localhost:3000/api/obtenerUltimaEditorial`);
+    console.log($UltimaEditorial)
+
+
+    document.getElementById('tEditorial').textContent=$UltimaEditorial.data[0].titulo;
+    document.getElementById('dEditorial').textContent=`${$UltimaEditorial.data[0].descripcion.substr(0,100)}`;
+    document.getElementById('cardEditorial').addEventListener('click',()=>{
+     
+        sessionStorage.setItem('ideditorial',`${$UltimaEditorial.data[0].ideditorial}`);
+        sessionStorage.setItem('tituloEditorial',`${$UltimaEditorial.data[0].titulo}`);
+        sessionStorage.setItem('descripcionEditorial',`${$UltimaEditorial.data[0].descripcion}`);
+        sessionStorage.setItem('fraseEditorial',`${$UltimaEditorial.data[0].fraserelevante}`);
+        sessionStorage.setItem('fechaEditorial',`${$UltimaEditorial.data[0].fecha.substr(0,10)}`);  
+        location.href="editorial.html"  
+    })
 })();
 
 (async function cargarOtrasNotas(){
@@ -84,14 +107,14 @@
     function addEventClick($element,$nota) {
         // debugger
         $element.addEventListener('click', () => {
-            localStorage.setItem('idnoticia',`${$nota.idnoticia}`);
-            localStorage.setItem('titulo',`${$nota.titulo}`);
-            localStorage.setItem('subtitulo',`${$nota.subtitulo}`);
-            localStorage.setItem('texto',`${$nota.texto}`);
-            localStorage.setItem('foto',`${$nota.fotografia}`);
-            localStorage.setItem('frase',`${$nota.frase}`);
-            localStorage.setItem('fecha',`${$nota.fecha}`);
-            localStorage.setItem('nombrecat',`${$nota.nombrecategoria}`);
+            sessionStorage.setItem('idnoticia',`${$nota.idnoticia}`);
+            sessionStorage.setItem('titulo',`${$nota.titulo}`);
+            sessionStorage.setItem('subtitulo',`${$nota.subtitulo}`);
+            sessionStorage.setItem('texto',`${$nota.texto}`);
+            sessionStorage.setItem('foto',`${$nota.fotografia}`);
+            sessionStorage.setItem('frase',`${$nota.frase}`);
+            sessionStorage.setItem('fecha',`${$nota.fecha}`);
+            sessionStorage.setItem('nombrecat',`${$nota.nombrecategoria}`);
             // getComentarios(`http://localhost:3000/api/EliminarComentario/${$comentario.idcomentario}`);
             // alert(`comentario Eliminado`)
             // location.reload();

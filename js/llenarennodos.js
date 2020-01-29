@@ -26,15 +26,15 @@
     function addEventClick($element,$nota) {
         debugger
         $element.addEventListener('click', () => {
-            localStorage.setItem('idnoticia',`${$nota.idnoticia}`);
-            localStorage.setItem('titulo',`${$nota.titulo}`);
-            localStorage.setItem('subtitulo',`${$nota.subtitulo}`);
-            localStorage.setItem('texto',`${$nota.texto}`);
-            localStorage.setItem('notalarga',`${$nota.notalarga}`);
-            localStorage.setItem('foto',`${$nota.fotografia}`);
-            localStorage.setItem('frase',`${$nota.frase}`);
-            localStorage.setItem('fecha',`${$nota.fecha}`);
-            localStorage.setItem('nombrecat',`${$nota.nombrecategoria}`);
+            sessionStorage.setItem('idnoticia',`${$nota.idnoticia}`);
+            sessionStorage.setItem('titulo',`${$nota.titulo}`);
+            sessionStorage.setItem('subtitulo',`${$nota.subtitulo}`);
+            sessionStorage.setItem('texto',`${$nota.texto}`);
+            sessionStorage.setItem('notalarga',`${$nota.notalarga}`);
+            sessionStorage.setItem('foto',`${$nota.fotografia}`);
+            sessionStorage.setItem('frase',`${$nota.frase}`);
+            sessionStorage.setItem('fecha',`${$nota.fecha}`);
+            sessionStorage.setItem('nombrecat',`${$nota.nombrecategoria}`);
             // getComentarios(`http://localhost:3000/api/EliminarComentario/${$comentario.idcomentario}`);
             // alert(`comentario Eliminado`)
             // location.reload();
@@ -86,14 +86,14 @@
     function addEventClick($element,$nota) {
         // debugger
         $element.addEventListener('click', () => {
-            localStorage.setItem('idnoticia',`${$nota.idnoticia}`);
-            localStorage.setItem('titulo',`${$nota.titulo}`);
-            localStorage.setItem('subtitulo',`${$nota.subtitulo}`);
-            localStorage.setItem('texto',`${$nota.texto}`);
-            localStorage.setItem('foto',`${$nota.fotografia}`);
-            localStorage.setItem('frase',`${$nota.frase}`);
-            localStorage.setItem('fecha',`${$nota.fecha}`);
-            localStorage.setItem('nombrecat',`${$nota.nombrecategoria}`);
+            sessionStorage.setItem('idnoticia',`${$nota.idnoticia}`);
+            sessionStorage.setItem('titulo',`${$nota.titulo}`);
+            sessionStorage.setItem('subtitulo',`${$nota.subtitulo}`);
+            sessionStorage.setItem('texto',`${$nota.texto}`);
+            sessionStorage.setItem('foto',`${$nota.fotografia}`);
+            sessionStorage.setItem('frase',`${$nota.frase}`);
+            sessionStorage.setItem('fecha',`${$nota.fecha}`);
+            sessionStorage.setItem('nombrecat',`${$nota.nombrecategoria}`);
             // getComentarios(`http://localhost:3000/api/EliminarComentario/${$comentario.idcomentario}`);
             // alert(`comentario Eliminado`)
             // location.reload();

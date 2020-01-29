@@ -1,7 +1,7 @@
-document.getElementById('titleEditorial').textContent=localStorage.getItem('tituloEditorial');
-document.getElementById('dateEditorial').textContent=localStorage.getItem('fechaEditorial');
-document.getElementById('descEditorial').textContent=localStorage.getItem('descripcionEditorial');
-document.getElementById('fraEditorial').textContent=localStorage.getItem('fraseEditorial');
+document.getElementById('titleEditorial').textContent=sessionStorage.getItem('tituloEditorial');
+document.getElementById('dateEditorial').textContent=sessionStorage.getItem('fechaEditorial');
+document.getElementById('descEditorial').textContent=sessionStorage.getItem('descripcionEditorial');
+document.getElementById('fraEditorial').textContent=sessionStorage.getItem('fraseEditorial');
 
 (async function cargarEditoriales(){
     async function getEditoriales(url) {
@@ -9,7 +9,7 @@ document.getElementById('fraEditorial').textContent=localStorage.getItem('fraseE
         const data = await response.json();
         return data;
     }
-    // const $listaComentarios= await getEditoriales(`https://diarionuevonorte.herokuapp.com/api/obtenerCometarios/${localStorage.getItem('idnoticia')}`);
+    // const $listaComentarios= await getEditoriales(`https://diarionuevonorte.herokuapp.com/api/obtenerCometarios/${sessionStorage.getItem('idnoticia')}`);
     const $listaEditoriales= await getEditoriales(`http://localhost:3000/api/obtenerEditoriales`);
     // debugger
     function EditorialesItemTemplate(editorial){
@@ -34,12 +34,12 @@ document.getElementById('fraEditorial').textContent=localStorage.getItem('fraseE
     function addEventClick($element,$editorial) {
         // debugger
         $element.addEventListener('click', () => {
-            localStorage.setItem('ideditorial',`${$editorial.ideditorial}`);
-            localStorage.setItem('tituloEditorial',`${$editorial.titulo}`);
-            localStorage.setItem('descripcionEditorial',`${$editorial.descripcion}`);
-            localStorage.setItem('fraseEditorial',`${$editorial.fraserelevante}`);
-            localStorage.setItem('fechaEditorial',`${$editorial.fecha.substr(0,10)}`);
-            // localStorage.setItem('nombrecat',`${$editorial.nombrecategoria}`);
+            sessionStorage.setItem('ideditorial',`${$editorial.ideditorial}`);
+            sessionStorage.setItem('tituloEditorial',`${$editorial.titulo}`);
+            sessionStorage.setItem('descripcionEditorial',`${$editorial.descripcion}`);
+            sessionStorage.setItem('fraseEditorial',`${$editorial.fraserelevante}`);
+            sessionStorage.setItem('fechaEditorial',`${$editorial.fecha.substr(0,10)}`);
+            // sessionStorage.setItem('nombrecat',`${$editorial.nombrecategoria}`);
             // getComentarios(`http://localhost:3000/api/EliminarComentario/${$comentario.idcomentario}`);
             // alert(`comentario Eliminado`)
             location.reload();
@@ -72,7 +72,7 @@ document.getElementById('btnAgregarEditorial').addEventListener('click',()=>{
         data.descripcion = document.getElementById('descripcionEditorial').value
         data.fraserelevante = document.getElementById('fraseEditorial').value
         data.fecha = fecha
-        data.idusu = localStorage.getItem('idUsuario');
+        data.idusu = sessionStorage.getItem('idUsuario');
 
         let JSO = JSON.stringify(data)
         fetch(url, {

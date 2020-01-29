@@ -4,8 +4,8 @@
         const data = await response.json();
         return data;
     }
-    const $listaNoticias= await getUltimasNoticias(`https://diarionuevonorte.herokuapp.com/api/obtenerUltimasCinco`);
-    // const $listaNoticias= await getUltimasNoticias(`http://localhost:3000/api/obtenerUltimasCinco`);
+    // const $listaNoticias= await getUltimasNoticias(`https://diarionuevonorte.herokuapp.com/api/obtenerUltimasCinco`);
+    const $listaNoticias= await getUltimasNoticias(`http://localhost:3000/api/obtenerUltimasCinco`);
     // debugger
     function NoticiasItemTemplate(noticia){
         return `<div class="item">
@@ -26,15 +26,15 @@
     function addEventClick($element,$nota) {
         // debugger
         $element.addEventListener('click', () => {
-            localStorage.setItem('idnoticia',`${$nota.idnoticia}`);
-            localStorage.setItem('titulo',`${$nota.titulo}`);
-            localStorage.setItem('subtitulo',`${$nota.subtitulo}`);
-            localStorage.setItem('texto',`${$nota.texto}`);
-            localStorage.setItem('notalarga',`${$nota.notalarga}`);
-            localStorage.setItem('foto',`${$nota.fotografia}`);
-            localStorage.setItem('frase',`${$nota.frase}`);
-            localStorage.setItem('fecha',`${$nota.fecha}`);
-            localStorage.setItem('nombrecat',`${$nota.nombrecategoria}`);
+            sessionStorage.setItem('idnoticia',`${$nota.idnoticia}`);
+            sessionStorage.setItem('titulo',`${$nota.titulo}`);
+            sessionStorage.setItem('subtitulo',`${$nota.subtitulo}`);
+            sessionStorage.setItem('texto',`${$nota.texto}`);
+            sessionStorage.setItem('notalarga',`${$nota.notalarga}`);
+            sessionStorage.setItem('foto',`${$nota.fotografia}`);
+            sessionStorage.setItem('frase',`${$nota.frase}`);
+            sessionStorage.setItem('fecha',`${$nota.fecha}`);
+            sessionStorage.setItem('nombrecat',`${$nota.nombrecategoria}`);
             // getComentarios(`http://localhost:3000/api/EliminarComentario/${$comentario.idcomentario}`);
             // alert(`comentario Eliminado`)
             // location.reload();
@@ -70,11 +70,11 @@
     document.getElementById('dEditorial').textContent=`${$UltimaEditorial.data[0].descripcion.substr(0,100)}`;
     document.getElementById('cardEditorial').addEventListener('click',()=>{
      
-        localStorage.setItem('ideditorial',`${$UltimaEditorial.data[0].ideditorial}`);
-        localStorage.setItem('tituloEditorial',`${$UltimaEditorial.data[0].titulo}`);
-        localStorage.setItem('descripcionEditorial',`${$UltimaEditorial.data[0].descripcion}`);
-        localStorage.setItem('fraseEditorial',`${$UltimaEditorial.data[0].fraserelevante}`);
-        localStorage.setItem('fechaEditorial',`${$UltimaEditorial.data[0].fecha.substr(0,10)}`);    
+        sessionStorage.setItem('ideditorial',`${$UltimaEditorial.data[0].ideditorial}`);
+        sessionStorage.setItem('tituloEditorial',`${$UltimaEditorial.data[0].titulo}`);
+        sessionStorage.setItem('descripcionEditorial',`${$UltimaEditorial.data[0].descripcion}`);
+        sessionStorage.setItem('fraseEditorial',`${$UltimaEditorial.data[0].fraserelevante}`);
+        sessionStorage.setItem('fechaEditorial',`${$UltimaEditorial.data[0].fecha.substr(0,10)}`);    
         location.href="nodos/editorial.html"
     })
 })();
@@ -85,8 +85,8 @@
         const data = await response.json();
         return data;
     }
-    const $listaNotas= await getOtrasNotas(`https://diarionuevonorte.herokuapp.com/api/obtenerOtrasNotas`);
-    // const $listaNotas= await getOtrasNotas(`http://localhost:3000/api/obtenerOtrasNotas`);
+    // const $listaNotas= await getOtrasNotas(`https://diarionuevonorte.herokuapp.com/api/obtenerOtrasNotas`);
+    const $listaNotas= await getOtrasNotas(`http://localhost:3000/api/obtenerOtrasNotas`);
     // debugger
     function NotaItemTemplate(nota){
         return `<div class="noticia">
@@ -110,14 +110,14 @@
     function addEventClick($element,$nota) {
         // debugger
         $element.addEventListener('click', () => {
-            localStorage.setItem('idnoticia',`${$nota.idnoticia}`);
-            localStorage.setItem('titulo',`${$nota.titulo}`);
-            localStorage.setItem('subtitulo',`${$nota.subtitulo}`);
-            localStorage.setItem('texto',`${$nota.texto}`);
-            localStorage.setItem('foto',`${$nota.fotografia}`);
-            localStorage.setItem('frase',`${$nota.frase}`);
-            localStorage.setItem('fecha',`${$nota.fecha}`);
-            localStorage.setItem('nombrecat',`${$nota.nombrecategoria}`);
+            sessionStorage.setItem('idnoticia',`${$nota.idnoticia}`);
+            sessionStorage.setItem('titulo',`${$nota.titulo}`);
+            sessionStorage.setItem('subtitulo',`${$nota.subtitulo}`);
+            sessionStorage.setItem('texto',`${$nota.texto}`);
+            sessionStorage.setItem('foto',`${$nota.fotografia}`);
+            sessionStorage.setItem('frase',`${$nota.frase}`);
+            sessionStorage.setItem('fecha',`${$nota.fecha}`);
+            sessionStorage.setItem('nombrecat',`${$nota.nombrecategoria}`);
             // getComentarios(`http://localhost:3000/api/EliminarComentario/${$comentario.idcomentario}`);
             // alert(`comentario Eliminado`)
             // location.reload();

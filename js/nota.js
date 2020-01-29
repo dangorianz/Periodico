@@ -1,9 +1,9 @@
-document.getElementById('imgNota').src=localStorage.getItem('foto');
-document.getElementById('textoNota').textContent=localStorage.getItem('texto');
-document.getElementById('tituloNota').textContent=localStorage.getItem('titulo');
-document.getElementById('subtituloNota').textContent=localStorage.getItem('subtitulo');
-document.getElementById('textNotaLarga').textContent=localStorage.getItem('notalarga');
-// document.getElementById('tituloNota').textContent=localStorage.getItem('titulo');
+document.getElementById('imgNota').src=sessionStorage.getItem('foto');
+document.getElementById('textoNota').textContent=sessionStorage.getItem('texto');
+document.getElementById('tituloNota').textContent=sessionStorage.getItem('titulo');
+document.getElementById('subtituloNota').textContent=sessionStorage.getItem('subtitulo');
+document.getElementById('textNotaLarga').textContent=sessionStorage.getItem('notalarga');
+// document.getElementById('tituloNota').textContent=sessionStorage.getItem('titulo');
 
 (async function cargarComentarios(){
     async function getComentarios(url) {
@@ -11,8 +11,8 @@ document.getElementById('textNotaLarga').textContent=localStorage.getItem('notal
         const data = await response.json();
         return data;
     }
-    const $listaComentarios= await getComentarios(`https://diarionuevonorte.herokuapp.com/api/obtenerCometarios/${localStorage.getItem('idnoticia')}`);
-    // const $listaComentarios= await getComentarios(`http://localhost:3000/api/obtenerCometarios/${localStorage.getItem('idnoticia')}`);
+    // const $listaComentarios= await getComentarios(`https://diarionuevonorte.herokuapp.com/api/obtenerCometarios/${sessionStorage.getItem('idnoticia')}`);
+    const $listaComentarios= await getComentarios(`http://localhost:3000/api/obtenerCometarios/${sessionStorage.getItem('idnoticia')}`);
     // debugger
     function ComentariosItemTemplate(comentario){
         return `<div class="comentario">
@@ -59,13 +59,13 @@ document.getElementById('btnComentar').addEventListener('click',()=>{
     var t = new Date;
     let fecha = `${t.getFullYear()}-${t.getMonth()+1}-${t.getDate()}`
 
-    const url = 'https://diarionuevonorte.herokuapp.com/api/IngresarComentario'
-    // const url = 'http://localhost:3000/api/IngresarComentario'
+    // const url = 'https://diarionuevonorte.herokuapp.com/api/IngresarComentario'
+    const url = 'http://localhost:3000/api/IngresarComentario'
         const data = {};
         data.texto = document.getElementById('comentarioNoticia').value
         data.nombrepersona = document.getElementById('nombreC').value
         data.fecha = fecha
-        data.idnoticia = localStorage.getItem('idnoticia')
+        data.idnoticia = sessionStorage.getItem('idnoticia')
 
         let JSO = JSON.stringify(data)
         fetch(url, {
