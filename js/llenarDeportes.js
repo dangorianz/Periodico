@@ -4,14 +4,14 @@
         const data = await response.json();
         return data;
     }
-    const $listaNoticias= await getUltimasNoticias(`https://diarionuevonorte.herokuapp.com/api/obtenerUltimasCincoDeportes`);
-    // const $listaNoticias= await getUltimasNoticias(`http://localhost:3000/api/obtenerUltimasCincoDeportes`);
+    // const $listaNoticias= await getUltimasNoticias(`https://diarionuevonorte.herokuapp.com/api/obtenerUltimasCincoDeportes`);
+    const $listaNoticias= await getUltimasNoticias(`http://localhost:3000/api/obtenerUltimasCincoDeportes`);
     // debugger
     function NoticiasItemTemplate(noticia){
         return `<div class="item">
         <h6>${noticia.nombrecategoria}</h6>
         <img class="imgUltimaNoticia" src='../img/ultimaNoticia.png'>
-        <a href="nodos/noticia.html">
+        <a href="noticia.html">
             <img src="${noticia.fotografia}" alt="">
             <h4>${noticia.titulo}</h4>
             <p class="quienPublico">por ${noticia.nombres} ${noticia.apellidos}</p>
@@ -77,6 +77,18 @@
         location.href="editorial.html"  
     })
 })();
+(async function cargarURL(){
+    async function getURL(url) {
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+    }
+    // const $listaNotas= await getURL(`https://diarionuevonorte.herokuapp.com/api/obtenerURL`);
+    const $URL= await getURL(`http://localhost:3000/api/obtenerURL`);
+    console.log($URL)
+        document.getElementById('URLvideo').src=$URL.data[0].url;
+    
+})();
 
 (async function cargarOtrasNotas(){
     async function getOtrasNotas(url) {
@@ -84,8 +96,8 @@
         const data = await response.json();
         return data;
     }
-    const $listaNotas= await getOtrasNotas(`https://diarionuevonorte.herokuapp.com/api/obtenerOtrasNotasDeportes`);
-    // const $listaNotas= await getOtrasNotas(`http://localhost:3000/api/obtenerOtrasNotasDeportes`);
+    // const $listaNotas= await getOtrasNotas(`https://diarionuevonorte.herokuapp.com/api/obtenerOtrasNotasDeportes`);
+    const $listaNotas= await getOtrasNotas(`http://localhost:3000/api/obtenerOtrasNotasDeportes`);
     // debugger
     function NotaItemTemplate(nota){
         return `<div class="noticia">

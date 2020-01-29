@@ -4,14 +4,14 @@
         const data = await response.json();
         return data;
     }
-    const $listaNoticias= await getUltimasNoticias(`https://diarionuevonorte.herokuapp.com/api/obtenerUltimasCincoInternacional`);
-    // const $listaNoticias= await getUltimasNoticias(`http://localhost:3000/api/obtenerUltimasCincoInternacional`);
+    // const $listaNoticias= await getUltimasNoticias(`https://diarionuevonorte.herokuapp.com/api/obtenerUltimasCincoInternacional`);
+    const $listaNoticias= await getUltimasNoticias(`http://localhost:3000/api/obtenerUltimasCincoInternacional`);
     // debugger
     function NoticiasItemTemplate(noticia){
         return `<div class="item">
         <h6>${noticia.nombrecategoria}</h6>
         <img class="imgUltimaNoticia" src='img/ultimaNoticia.png'>
-        <a href="nodos/noticia.html">
+        <a href="noticia.html">
             <img src="${noticia.fotografia}" alt="">
             <h4>${noticia.titulo}</h4>
             <p class="quienPublico">por ${noticia.nombres} ${noticia.apellidos}</p>
@@ -77,6 +77,18 @@
         location.href="editorial.html"  
     })
 })();
+(async function cargarURL(){
+    async function getURL(url) {
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+    }
+    // const $listaNotas= await getURL(`https://diarionuevonorte.herokuapp.com/api/obtenerURL`);
+    const $URL= await getURL(`http://localhost:3000/api/obtenerURL`);
+    console.log($URL)
+        document.getElementById('URLvideo').src=$URL.data[0].url;
+    
+})();
 
 (async function cargarOtrasNotas(){
     async function getOtrasNotas(url) {
@@ -84,14 +96,14 @@
         const data = await response.json();
         return data;
     }
-    const $listaNotas= await getOtrasNotas(`https://diarionuevonorte.herokuapp.com/obtenerOtrasNotasInternacional`);
-    // const $listaNotas= await getOtrasNotas(`http://localhost:3000/obtenerOtrasNotasInternacional`);
+    // const $listaNotas= await getOtrasNotas(`https://diarionuevonorte.herokuapp.com/obtenerOtrasNotasInternacional`);
+    const $listaNotas= await getOtrasNotas(`http://localhost:3000/obtenerOtrasNotasInternacional`);
     // debugger
     function NotaItemTemplate(nota){
         return `<div class="noticia">
                     <img src="${nota.fotografia}" alt="">
                     <div class="InfoNoti">
-                        <a href="nodos/noticia.html"><h4 style="font-weight: bold; color: black;">${nota.titulo}</h4> </a>
+                        <a href="noticia.html"><h4 style="font-weight: bold; color: black;">${nota.titulo}</h4> </a>
                         <h6 style="font-weight: bold;">${nota.subtitulo}</h6>
                         <small>${nota.fecha.substr(0,10)}</small>
                         <h5>${nota.nombrecategoria}</h5>
