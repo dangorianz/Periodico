@@ -147,8 +147,9 @@
       <div class="container">
         <div class="row">
           <div class="col col-8"> 
-            <h1 id="tituloNota">Titulo de La Editorial</h1>
-            <h3 id="subtituloNota">Subtitulo de la Editorial</h3>
+            <h1 id="titleEditorial">Titulo de La Editorial</h1>
+            <!-- <h3 id="subtituloNota">Subtitulo de la Editorial</h3> -->
+            <small id="dateEditorial">29/01/2020</small>
             <div class="masNoticias">
                 <div class="containerRedesSociales">
                   <a class="twitter" href="#"><i class="icon-twitter"></i></a>
@@ -160,8 +161,8 @@
                 </div>
               <hr>
               <!-- <img id="imgNota" src="../img/noti1.jpg" alt="">  -->
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro fugiat eligendi architecto corporis doloremque tempore, consectetur esse. Quisquam omnis nostrum deserunt tenetur quidem impedit delectus aperiam sit tempora libero, aliquid itaque voluptatibus quae necessitatibus molestias sequi officiis ullam quo minus et, a nulla blanditiis! Fugiat omnis ipsam ipsa totam. Eaque?</p>                
-              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro fugiat eligendi architecto corporis doloremque tempore, consectetur esse. Quisquam omnis nostrum deserunt tenetur quidem impedit delectus aperiam sit tempora libero, aliquid itaque voluptatibus quae necessitatibus molestias sequi officiis ullam quo minus et, a nulla blanditiis! Fugiat omnis ipsam ipsa totam. Eaque?</p>                
+              <p id="descEditorial"></p>                
+              <p id="fraEditorial" style="font-weight:bold; border:1px solid rgba(0,0,0,.1); padding:20px; border-radius:10px;"></p>              
                 <hr>
                
                 <!-- <h4>Comentarios</h4>
@@ -179,66 +180,46 @@
                   <button id="btnComentar" class="btnComentario">Comentar</button> -->
             </div>
         </div>
+        <div class="modal fade" id="modalEditorial" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Nueva Editorial</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form>
+                  <div class="form-group">
+                    <label for="recipient-name" class="col-form-label">Titulo</label>
+                    <input type="text" class="form-control" style="font-weight: bold;" id="tituloEditorial">
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">contenido:</label>
+                    <textarea class="form-control" id="descripcionEditorial"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="message-text" class="col-form-label">Frase relevante:</label>
+                    <textarea class="form-control" style="font-weight: bold;" id="fraseEditorial"></textarea>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success" id="btnAgregarEditorial">Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="col col-4">
-            <div class="card">
-                <a style="color: black; text-decoration: none; cursor: pointer;" href="nodos/editorial.html">
-                  <img src="../img/Zona Norte blanco.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <div class="title">
-                        <h6 style="color: #C21812; font-weight: bold;">Editorial</h6>
-    
-    
-                    </div>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-  
-                </a>
-              </div>
-              <hr>
-            <div class="card">
-                <a style="color: black; text-decoration: none; cursor: pointer;" href="nodos/editorial.html">
-                  <img src="../img/Zona Norte blanco.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <div class="title">
-                        <h6 style="color: #C21812; font-weight: bold;">Editorial</h6>
-    
-    
-                    </div>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-  
-                </a>
-              </div>
-              <hr>
-            <div class="card">
-                <a style="color: black; text-decoration: none; cursor: pointer;" href="nodos/editorial.html">
-                  <img src="../img/Zona Norte blanco.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <div class="title">
-                        <h6 style="color: #C21812; font-weight: bold;">Editorial</h6>
-    
-    
-                    </div>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-  
-                </a>
-              </div>
-              <hr>
-            <div class="card">
-                <a style="color: black; text-decoration: none; cursor: pointer;" href="nodos/editorial.html">
-                  <img src="../img/Zona Norte blanco.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <div class="title">
-                        <h6 style="color: #C21812; font-weight: bold;">Editorial</h6>
-    
-    
-                    </div>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  </div>
-  
-                </a>
-              </div>
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalEditorial" data-whatever="@mdo">Agregar Editorial</button>
+          <hr>
+          <div id="contarinerEditoriales" class="contarinerEditoriales">
+
+          
+            
+          </div>
         </div>
         </div>
       </div>
@@ -285,6 +266,7 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="../js/hora.js"></script>
+    <script src="../js/editorial.js"></script>
     <!-- <script src="../js/nota.js"></script> -->
 </body>
 </html>

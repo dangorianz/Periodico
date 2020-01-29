@@ -8,7 +8,7 @@
     // const $listaPublicidades= await getPublicidades(`http://localhost:3000/api/obtenerPublicidades`);
     // debugger
     function PortadaItemTemplate(publicidad){
-        debugger
+        // debugger
         return `<div class="carousel-item ">
                     <img src="${publicidad.foto}" class="d-block w-100" alt="..." style="height:150px">
                 </div>`;

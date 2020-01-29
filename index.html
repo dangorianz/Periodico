@@ -107,7 +107,7 @@
                     
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
-                    <button type="button" class="btn btn-primary" id="logearse" data-toggle="modal" data-target="#loginModal" data-whatever="@fat"><i class="icon-user"></i></button>
+                    <button type="button" style="padding: 5px 10px;" class="btn btn-primary" id="logearse" data-toggle="modal" data-target="#loginModal" data-whatever="@fat">Log In</button>
                     <button class="cerrarSesion" id="cerrarSesion">Cerrar Sesion</button>
                   </form>
                 </div>
@@ -129,7 +129,8 @@
             <h1>Noticias Nuevas</h1>
             <!--Boton para agregar nuevo modal-->
             <div id="contBtnAgregarNota">
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Agregar Nueva Nota</button>
+              <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Agregar Nueva Nota</button>
+              <a href="nodos/publicidades.html" class="btn btn-outline-success">Agregar Publicidad</a>
             </div>
             <!---->
             <div id="masNoticias" class="masNoticias">
@@ -145,6 +146,28 @@
               <div class="card-body">
                 <img class="" src="img/diariMuestra.jpg" alt="">
               </div>
+            </div>
+            <hr>
+            
+            <div  class="card">
+              <div class="card-header">
+                <h3 style="color: white; font-weight: bold; text-align: right; margin: 0;"><span style="
+vertical-align: text-bottom;"><div style="margin-right: 2%;" class="circulo"></div></span>Live</h3>
+              </div>
+              
+              <!-- <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FATBRadio%2Fvideos%2F1321772301348869%2F&show_text=1&width=560" width="100%" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe> -->
+              <iframe id="URLvideo" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcnnchile%2Fvideos%2F2768464603238256%2F&show_text=0&width=560" width="100%" height="200px" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
+              <form action="">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon3">url</span>
+                  </div>
+                  <input type="text" class="form-control" id="urlText" style="font-weight: bold;" placeholder="del video.." aria-describedby="basic-addon3">
+                  <div class="input-group-append">
+                    <button class="btn btn-outline-dark" type="button" id="urlActualizar">Actualizar</button>
+                  </div>
+                </div>
+              </form>
             </div>
             <hr>
             <div class="accordion" id="accordionExample">
@@ -177,26 +200,17 @@
               
             </div>
             <hr>
-            <div  class="card">
-              <div class="card-header">
-                <h3 style="color: white; font-weight: bold; text-align: right; margin: 0;"><span style="
-vertical-align: text-bottom;"><div style="margin-right: 2%;" class="circulo"></div></span>Live</h3>
-              </div>
-              
-              <!-- <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2FATBRadio%2Fvideos%2F1321772301348869%2F&show_text=1&width=560" width="100%" height="300" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe> -->
-              <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fcnnchile%2Fvideos%2F2768464603238256%2F&show_text=0&width=560" width="100%" height="315" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allowFullScreen="true"></iframe>
-            </div>
-            <hr>
-            <div class="card">
-              <a style="color: black; text-decoration: none; cursor: pointer;" href="nodos/editorial.html">
+            <div id="cardEditorial" class="card">
+              <a style="color: black; text-decoration: none; cursor: pointer;">
                 <img src="img/Zona Norte blanco.jpg" class="card-img-top" alt="...">
                 <div class="card-body">
                   <div class="title">
-                      <h5 style="color: #C21812; font-weight: bold;">Editorial</h5>
-  
+                      <h5 id="tEditorial" style="color: #222930; font-weight: bold;"></h5>
+                      <h6 id="" style="color: #C21812; font-weight: bold; font-size: 13px;">Editorial</h6>
   
                   </div>
-                  <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dignissimos repellat laborum? Sunt ipsam quas beatae unde, id voluptatum magni!... <span><a href="nodos/editorial.html">Ver Mas</a></span></p>
+                  <p id="dEditorial" class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dignissimos repellat laborum? Sunt ipsam quas beatae unde, id voluptatum magni!... </p>
+                  <a href="nodos/editorial.html">Ver mas...</a>
                 </div>
 
               </a>

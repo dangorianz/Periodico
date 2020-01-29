@@ -24,7 +24,7 @@
         return $html.body.children[0];
     }
     function addEventClick($element,$nota) {
-        debugger
+        // debugger
         $element.addEventListener('click', () => {
             localStorage.setItem('idnoticia',`${$nota.idnoticia}`);
             localStorage.setItem('titulo',`${$nota.titulo}`);
@@ -53,6 +53,30 @@
     }
     const $containerNoticias = document.getElementById('containerUltimasCinco')
     renderNoticiaList($listaNoticias, $containerNoticias)
+})();
+
+(async function cargarUltimaEditorial(){
+    async function getUltimaEditorial(url) {
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+    }
+    // const $listaNotas= await getUltimaEditorial(`https://diarionuevonorte.herokuapp.com/api/obtenerUltimaEditorial`);
+    const $UltimaEditorial= await getUltimaEditorial(`http://localhost:3000/api/obtenerUltimaEditorial`);
+    console.log($UltimaEditorial)
+
+
+    document.getElementById('tEditorial').textContent=$UltimaEditorial.data[0].titulo;
+    document.getElementById('dEditorial').textContent=`${$UltimaEditorial.data[0].descripcion.substr(0,100)}`;
+    document.getElementById('cardEditorial').addEventListener('click',()=>{
+     
+        localStorage.setItem('ideditorial',`${$UltimaEditorial.data[0].ideditorial}`);
+        localStorage.setItem('tituloEditorial',`${$UltimaEditorial.data[0].titulo}`);
+        localStorage.setItem('descripcionEditorial',`${$UltimaEditorial.data[0].descripcion}`);
+        localStorage.setItem('fraseEditorial',`${$UltimaEditorial.data[0].fraserelevante}`);
+        localStorage.setItem('fechaEditorial',`${$UltimaEditorial.data[0].fecha.substr(0,10)}`);    
+        location.href="nodos/editorial.html"
+    })
 })();
 
 (async function cargarOtrasNotas(){
@@ -115,3 +139,40 @@
     const $containerNotas = document.getElementById('masNoticias')
     renderNotaList($listaNotas, $containerNotas)
 })();
+
+
+(async function cargarURL(){
+    async function getURL(url) {
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+    }
+    // const $listaNotas= await getURL(`https://diarionuevonorte.herokuapp.com/api/obtenerURL`);
+    const $URL= await getURL(`http://localhost:3000/api/obtenerURL`);
+    console.log($URL)
+        document.getElementById('URLvideo').src=$URL.data[0].url;
+    
+})();
+
+document.getElementById('urlActualizar').addEventListener('click',()=>{
+
+    // const url = `https://diarionuevonorte.herokuapp.com/api/ActualizarTransmision/${}`
+    const url = `http://localhost:3000/api/ActualizarTransmision/1`;
+      let data = {};
+      data.url=document.getElementById('urlText').value
+      // debugger
+     
+      // debugger
+      let JSO = JSON.stringify(data)
+    //   alert(JSO);
+    
+      fetch(url, {
+          method: 'PUT', // or 'PUT'
+          body: JSO, // data can be `string` or {object}!
+          headers:{
+              'Content-Type': 'application/json'
+          }
+      }).then(res => res.json())
+      .catch(error => console.error('Error:', error))
+      .then(response => location.reload()); 
+})
