@@ -1,5 +1,5 @@
-// let direccionURLZ = 'https://diarionuevonorte.herokuapp.com';
-let direccionURLZ = 'http://localhost:3000';
+// let direccionURLINI = 'https://diarionuevonorte.herokuapp.com';
+let direccionURLINI = 'http://localhost:3000';
 
 (async function cargarUltimasNoticias(){
     async function getUltimasNoticias(url) {
@@ -7,7 +7,7 @@ let direccionURLZ = 'http://localhost:3000';
         const data = await response.json();
         return data;
     }
-    const $listaNoticias= await getUltimasNoticias(`${direccionURLZ}/api/obtenerUltimasCinco`);
+    const $listaNoticias= await getUltimasNoticias(`${direccionURLINI}/api/obtenerUltimasCinco`);
     // const $listaNoticias= await getUltimasNoticias(`http://localhost:3000/api/obtenerUltimasCinco`);
     // debugger
     function NoticiasItemTemplate(noticia){
@@ -64,7 +64,7 @@ let direccionURLZ = 'http://localhost:3000';
         const data = await response.json();
         return data;
     }
-    const $UltimaEditorial= await getUltimaEditorial(`${direccionURLZ}/api/obtenerUltimaEditorial`);
+    const $UltimaEditorial= await getUltimaEditorial(`${direccionURLINI}/api/obtenerUltimaEditorial`);
     // const $UltimaEditorial= await getUltimaEditorial(`http://localhost:3000/api/obtenerUltimaEditorial`);
     console.log($UltimaEditorial)
 
@@ -88,7 +88,7 @@ let direccionURLZ = 'http://localhost:3000';
         const data = await response.json();
         return data;
     }
-    const $listaNotas= await getOtrasNotas(`${direccionURLZ}/api/obtenerOtrasNotas`);
+    const $listaNotas= await getOtrasNotas(`${direccionURLINI}/api/obtenerOtrasNotas`);
     // const $listaNotas= await getOtrasNotas(`http://localhost:3000/api/obtenerOtrasNotas`);
     // debugger
     function NotaItemTemplate(nota){
@@ -150,7 +150,7 @@ let direccionURLZ = 'http://localhost:3000';
         const data = await response.json();
         return data;
     }
-    const $URL= await getURL(`${direccionURLZ}/api/obtenerURL`);
+    const $URL= await getURL(`${direccionURLINI}/api/obtenerURL`);
     // const $URL= await getURL(`http://localhost:3000/api/obtenerURL`);
     console.log($URL)
         document.getElementById('URLvideo').src=$URL.data[0].url;
@@ -159,7 +159,7 @@ let direccionURLZ = 'http://localhost:3000';
 
 document.getElementById('urlActualizar').addEventListener('click',()=>{
 
-    const url = `${direccionURLZ}/api/ActualizarTransmision/1`;
+    const url = `${direccionURLINI}/api/ActualizarTransmision/1`;
     // const url = `http://localhost:3000/api/ActualizarTransmision/1`;
       let data = {};
       data.url=document.getElementById('urlText').value

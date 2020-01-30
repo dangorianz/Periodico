@@ -1,5 +1,5 @@
-// let direccionURL = 'https://diarionuevonorte.herokuapp.com';
-let direccionURL = 'http://localhost:3000';
+// let direccionURLNO = 'https://diarionuevonorte.herokuapp.com';
+let direccionURLNO = 'http://localhost:3000';
 
 (async function cargarUltimasNoticias(){
     async function getUltimasNoticias(url) {
@@ -7,7 +7,7 @@ let direccionURL = 'http://localhost:3000';
         const data = await response.json();
         return data;
     }
-    const $listaNoticias= await getUltimasNoticias(`${direccionURL}/api/obtenerUltimasCinco`);
+    const $listaNoticias= await getUltimasNoticias(`${direccionURLNO}/api/obtenerUltimasCinco`);
     // const $listaNoticias= await getUltimasNoticias(`http://localhost:3000/api/obtenerUltimasCinco`);
     // debugger
     function NoticiasItemTemplate(noticia){
@@ -64,7 +64,7 @@ let direccionURL = 'http://localhost:3000';
         const data = await response.json();
         return data;
     }
-    const $listaNotas= await getOtrasNotas(`${direccionURL}/api/obtenerOtrasNotas`);
+    const $listaNotas= await getOtrasNotas(`${direccionURLNO}/api/obtenerOtrasNotas`);
     // const $listaNotas= await getOtrasNotas(`http://localhost:3000/api/obtenerOtrasNotas`);
     // debugger
     function NotaItemTemplate(nota){

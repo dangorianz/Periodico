@@ -5,8 +5,8 @@ document.getElementById('subtituloNota').textContent=sessionStorage.getItem('sub
 document.getElementById('textNotaLarga').textContent=sessionStorage.getItem('notalarga');
 // document.getElementById('tituloNota').textContent=sessionStorage.getItem('titulo');
 
-// let direccionURL = 'https://diarionuevonorte.herokuapp.com';
-let direccionURL = 'http://localhost:3000';
+// let direccionURLNOTA = 'https://diarionuevonorte.herokuapp.com';
+let direccionURLNOTA = 'http://localhost:3000';
 
 (async function cargarComentarios(){
     async function getComentarios(url) {
@@ -14,7 +14,7 @@ let direccionURL = 'http://localhost:3000';
         const data = await response.json();
         return data;
     }
-    const $listaComentarios= await getComentarios(`${direccionURL}/api/obtenerCometarios/${sessionStorage.getItem('idnoticia')}`);
+    const $listaComentarios= await getComentarios(`${direccionURLNOTA}/api/obtenerCometarios/${sessionStorage.getItem('idnoticia')}`);
     // const $listaComentarios= await getComentarios(`http://localhost:3000/api/obtenerCometarios/${sessionStorage.getItem('idnoticia')}`);
     // debugger
     function ComentariosItemTemplate(comentario){
@@ -62,7 +62,7 @@ document.getElementById('btnComentar').addEventListener('click',()=>{
     var t = new Date;
     let fecha = `${t.getFullYear()}-${t.getMonth()+1}-${t.getDate()}`
 
-    const url = `${direccionURL}/api/IngresarComentario`
+    const url = `${direccionURLNOTA}/api/IngresarComentario`
     // const url = 'http://localhost:3000/api/IngresarComentario'
         const data = {};
         data.texto = document.getElementById('comentarioNoticia').value

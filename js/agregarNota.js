@@ -1,5 +1,5 @@
-// let direccionURL = 'https://diarionuevonorte.herokuapp.com';
-let direccionURL = 'http://localhost:3000';
+// let direccionURLAg = 'https://diarionuevonorte.herokuapp.com';
+let direccionURLAg = 'http://localhost:3000';
 const $agregarNota = document.getElementById('agregarNota')
 
 let fotoNota
@@ -21,7 +21,7 @@ $agregarNota.addEventListener('click',()=>{
     var t = new Date;
     let fecha = `${t.getFullYear()}-${t.getMonth()+1}-${t.getDate()}`
 
-    const url = `${direccionURL}/api/IngresarNota`
+    const url = `${direccionURLAg}/api/IngresarNota`
 
         const data = {};
         data.titulo = document.getElementById('tituloNota').value

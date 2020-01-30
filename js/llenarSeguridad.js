@@ -1,5 +1,5 @@
-// let direccionURLS = 'https://diarionuevonorte.herokuapp.com';
-let direccionURLS = 'http://localhost:3000';
+// let direccionURLSE = 'https://diarionuevonorte.herokuapp.com';
+let direccionURLSE = 'http://localhost:3000';
 
 (async function cargarUltimasNoticias(){
     async function getUltimasNoticias(url) {
@@ -7,7 +7,7 @@ let direccionURLS = 'http://localhost:3000';
         const data = await response.json();
         return data;
     }
-    const $listaNoticias= await getUltimasNoticias(`${direccionURLS}/api/obtenerUltimasCincoSeguridad`);
+    const $listaNoticias= await getUltimasNoticias(`${direccionURLSE}/api/obtenerUltimasCincoSeguridad`);
     // const $listaNoticias= await getUltimasNoticias(`http://localhost:3000/api/obtenerUltimasCincoSeguridad`);
     // debugger
     function NoticiasItemTemplate(noticia){
@@ -62,7 +62,7 @@ let direccionURLS = 'http://localhost:3000';
         const data = await response.json();
         return data;
     }
-    const $URL= await getURL(`${direccionURLS}/api/obtenerURL`);
+    const $URL= await getURL(`${direccionURLSE}/api/obtenerURL`);
     // const $URL= await getURL(`http://localhost:3000/api/obtenerURL`);
     console.log($URL)
         document.getElementById('URLvideo').src=$URL.data[0].url;
@@ -75,7 +75,7 @@ let direccionURLS = 'http://localhost:3000';
         const data = await response.json();
         return data;
     }
-    const $UltimaEditorial= await getUltimaEditorial(`${direccionURLS}/api/obtenerUltimaEditorial`);
+    const $UltimaEditorial= await getUltimaEditorial(`${direccionURLSE}/api/obtenerUltimaEditorial`);
     // const $UltimaEditorial= await getUltimaEditorial(`http://localhost:3000/api/obtenerUltimaEditorial`);
     console.log($UltimaEditorial)
 
@@ -99,7 +99,7 @@ let direccionURLS = 'http://localhost:3000';
         const data = await response.json();
         return data;
     }
-    const $listaNotas= await getOtrasNotas(`${direccionURLS}/api/obtenerOtrasNotasSeguridad`);
+    const $listaNotas= await getOtrasNotas(`${direccionURLSE}/api/obtenerOtrasNotasSeguridad`);
     // const $listaNotas= await getOtrasNotas(`http://localhost:3000/api/obtenerOtrasNotasSeguridad`);
     // debugger
     function NotaItemTemplate(nota){

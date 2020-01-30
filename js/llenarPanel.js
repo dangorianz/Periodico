@@ -1,5 +1,5 @@
-// let direccionURL = 'https://diarionuevonorte.herokuapp.com';
-let direccionURL = 'http://localhost:3000';
+// let direccionURLPA = 'https://diarionuevonorte.herokuapp.com';
+let direccionURLPA = 'http://localhost:3000';
 
 (async function cargarPanel(){
     async function getPanel(url) {
@@ -7,7 +7,7 @@ let direccionURL = 'http://localhost:3000';
         const data = await response.json();
         return data;
     }
-    const $listaNoticias= await getPanel(`${direccionURL}/api/obtenerPublicidades`);
+    const $listaNoticias= await getPanel(`${direccionURLPA}/api/obtenerPublicidades`);
     // const $listaNoticias= await getPanel(`http://localhost:3000/api/obtenerPublicidades`);
     // debugger
     function PanelItemTemplateA(publicidad){

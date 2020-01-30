@@ -3,8 +3,8 @@ document.getElementById('dateEditorial').textContent=sessionStorage.getItem('fec
 document.getElementById('descEditorial').textContent=sessionStorage.getItem('descripcionEditorial');
 document.getElementById('fraEditorial').textContent=sessionStorage.getItem('fraseEditorial');
 
-// let direccionURL = 'https://diarionuevonorte.herokuapp.com';
-let direccionURL = 'http://localhost:3000';
+// let direccionURLEDI = 'https://diarionuevonorte.herokuapp.com';
+let direccionURLEDI = 'http://localhost:3000';
 
 (async function cargarEditoriales(){
     async function getEditoriales(url) {
@@ -12,7 +12,7 @@ let direccionURL = 'http://localhost:3000';
         const data = await response.json();
         return data;
     }
-    const $listaEditoriales= await getEditoriales(`${direccionURL}/api/obtenerEditoriales`);
+    const $listaEditoriales= await getEditoriales(`${direccionURLEDI}/api/obtenerEditoriales`);
     // const $listaEditoriales= await getEditoriales(`http://localhost:3000/api/obtenerEditoriales`);
     // debugger
     function EditorialesItemTemplate(editorial){
@@ -68,7 +68,7 @@ document.getElementById('btnAgregarEditorial').addEventListener('click',()=>{
     var t = new Date;
     let fecha = `${t.getFullYear()}-${t.getMonth()+1}-${t.getDate()}`
 
-    const url = `${direccionURL}/api/InsertarEditorial`
+    const url = `${direccionURLEDI}/api/InsertarEditorial`
     // const url = 'http://localhost:3000/api/InsertarEditorial'
         const data = {};
         data.titulo = document.getElementById('tituloEditorial').value
