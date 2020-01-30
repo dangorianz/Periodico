@@ -1,6 +1,9 @@
 const $btnAgregarEmpresa = document.getElementById('btnAgregarEmpresa')
 const $btnAgregarPublicidad = document.getElementById('btnAgregarPublicidad')
 
+// let direccionURL = 'https://diarionuevonorte.herokuapp.com';
+let direccionURL = 'http://localhost:3000';
+
 let fotoPublicidad
 document.getElementById("filePublicidad").addEventListener("change", getUrl);
 function getUrl() {
@@ -21,7 +24,7 @@ function getUrl() {
         const data = await response.json();
         return data;
     }
-    const $listaEmpresas= await getEmpresas(`https://diarionuevonorte.herokuapp.com/api/obtenerEmpresas`);
+    const $listaEmpresas= await getEmpresas(`${direccionURL}/api/obtenerEmpresas`);
     // const $listaEmpresas= await getEmpresas(`http://localhost:3000/api/obtenerEmpresas`);
     // debugger
     function NoticiasItemTemplate(empresa){
@@ -51,7 +54,7 @@ function getUrl() {
 $btnAgregarEmpresa.addEventListener('click',()=>{
     alert(document.getElementById('nombreEmpresaP').value)
     
-    const url = 'https://diarionuevonorte.herokuapp.com/api/InsertarEmpresa'
+    const url = `${direccionURL}/api/InsertarEmpresa`
     // const url = 'http://localhost:3000/api/InsertarEmpresa'
         const data = {};
         data.nombreEmpresa = document.getElementById('nombreEmpresaP').value;
@@ -71,7 +74,7 @@ $btnAgregarEmpresa.addEventListener('click',()=>{
 })
  
 $btnAgregarPublicidad.addEventListener('click',()=>{
-    const url = 'https://diarionuevonorte.herokuapp.com/api/InsertarPublicidad'
+    const url = `${direccionURL}/api/InsertarPublicidad`
     // const url = 'http://localhost:3000/api/InsertarPublicidad'
         const data = {};
         data.foto= fotoPublicidad;

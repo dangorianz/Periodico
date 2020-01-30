@@ -1,11 +1,14 @@
+// let direccionURLD = 'https://diarionuevonorte.herokuapp.com';
+let direccionURLD = 'http://localhost:3000';
+
 (async function cargarUltimasNoticias(){
     async function getUltimasNoticias(url) {
         const response = await fetch(url);
         const data = await response.json();
         return data;
     }
-    // const $listaNoticias= await getUltimasNoticias(`https://diarionuevonorte.herokuapp.com/api/obtenerUltimasCincoDeportes`);
-    const $listaNoticias= await getUltimasNoticias(`http://localhost:3000/api/obtenerUltimasCincoDeportes`);
+    const $listaNoticias= await getUltimasNoticias(`${direccionURLD}/api/obtenerUltimasCincoDeportes`);
+    // const $listaNoticias= await getUltimasNoticias(`http://localhost:3000/api/obtenerUltimasCincoDeportes`);
     // debugger
     function NoticiasItemTemplate(noticia){
         return `<div class="item">
@@ -60,8 +63,8 @@
         const data = await response.json();
         return data;
     }
-    // const $listaNotas= await getUltimaEditorial(`https://diarionuevonorte.herokuapp.com/api/obtenerUltimaEditorial`);
-    const $UltimaEditorial= await getUltimaEditorial(`http://localhost:3000/api/obtenerUltimaEditorial`);
+    const $UltimaEditorial= await getUltimaEditorial(`${direccionURLD}/api/obtenerUltimaEditorial`);
+    // const $UltimaEditorial= await getUltimaEditorial(`http://localhost:3000/api/obtenerUltimaEditorial`);
     console.log($UltimaEditorial)
 
 
@@ -83,8 +86,8 @@
         const data = await response.json();
         return data;
     }
-    // const $listaNotas= await getURL(`https://diarionuevonorte.herokuapp.com/api/obtenerURL`);
-    const $URL= await getURL(`http://localhost:3000/api/obtenerURL`);
+    const $URL= await getURL(`${direccionURLD}/api/obtenerURL`);
+    // const $URL= await getURL(`http://localhost:3000/api/obtenerURL`);
     console.log($URL)
         document.getElementById('URLvideo').src=$URL.data[0].url;
     
@@ -96,8 +99,8 @@
         const data = await response.json();
         return data;
     }
-    // const $listaNotas= await getOtrasNotas(`https://diarionuevonorte.herokuapp.com/api/obtenerOtrasNotasDeportes`);
-    const $listaNotas= await getOtrasNotas(`http://localhost:3000/api/obtenerOtrasNotasDeportes`);
+    const $listaNotas= await getOtrasNotas(`${direccionURLD}/api/obtenerOtrasNotasDeportes`);
+    // const $listaNotas= await getOtrasNotas(`http://localhost:3000/api/obtenerOtrasNotasDeportes`);
     // debugger
     function NotaItemTemplate(nota){
         return `<div class="noticia">

@@ -107,7 +107,7 @@
                     
                   </ul>
                   <form class="form-inline my-2 my-lg-0">
-                    <button type="button" class="btn btn-primary" id="logearse" data-toggle="modal" data-target="#loginModal" data-whatever="@fat"><i class="icon-user"></i></button>
+                    <button type="button" style="padding:none;background: transparent; border: none;outline: 0; margin-right: 20px;" id="logearse" data-toggle="modal" data-target="#loginModal" data-whatever="@fat"><img style="color: white;" src="../img/user.png" alt=""></button>
                     <button class="cerrarSesion" id="cerrarSesion">Cerrar Sesion</button>
                   </form>
                 </div>
@@ -128,9 +128,7 @@
           <div class="col col-8"> 
             <h1>Noticias Nuevas</h1>
             <!--Boton para agregar nuevo modal-->
-            <div id="contBtnAgregarNota">
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Agregar Nueva Nota</button>
-            </div>
+            
             <!---->
             <div id="masNoticias" class="masNoticias">
 
@@ -209,56 +207,7 @@ vertical-align: text-bottom;"><div style="margin-right: 2%;" class="circulo"></d
       </div>
     </main> 
     <!--Modal de agregar nueva noticia-->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Nueva Nota</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form>
-              <div class="form-group">
-                <label for="recipient-name" class="col-form-label">Titulo:</label>
-                <input type="text" class="form-control" id="tituloNota">
-              </div>
-              <div class="form-group">
-                <label for="message-text" class="col-form-label">Subtitulo:</label>
-                <input type="text" class="form-control" id="subtituloNota">
-              </div>
-              <div class="form-group">
-                <label for="message-text" class="col-form-label">Texto:</label>
-                <textarea class="form-control" id="textoNota"></textarea>
-              </div>
-              <div class="form-group">
-                <label for="message-text" class="col-form-label">Fotografia:</label>
-                <input type="file" class="files" id="fileNota">
-                <img id="imgDocente" class="imgss" height="100">
-              </div>
-              <div class="form-group">
-                <label for="message-text" class="col-form-label">Categoria:</label>
-                <select name="" id="categoriaNota" class="form-control">
-                  <option value="1">Montero</option>
-                  <option value="2">Localidades</option>
-                  <option value="3">Santa Cruz</option>
-                  <option value="4">Seguridad</option>
-                  <option value="5">Deportes</option>
-                  <option value="6">Sociales</option>
-                  <option value="7">Nacional</option>
-                  <option value="8">Internacional</option>
-                </select>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
-            <button type="button" id="agregarNota" class="btn btn-success">Agregar Nota</button>
-          </div>
-        </div>
-      </div>
-    </div>
+    
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -329,9 +278,8 @@ vertical-align: text-bottom;"><div style="margin-right: 2%;" class="circulo"></d
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="../js/hora.js"></script>
-    <script src="../js/agregarNota.js"></script>
     <script src="../js/llenarSociales.js"></script>
     <script src="../js/log.js"></script>
-    <script src="../js/verificarUsuario.js"></script>
+    <script src="../js/verificarUsuarioB.js"></script>
 </body>
 </html>

@@ -1,10 +1,12 @@
+// let direccionURL = 'https://diarionuevonorte.herokuapp.com';
+let direccionURL = 'http://localhost:3000';
 const $agregarNota = document.getElementById('agregarNota')
 
 let fotoNota
 document.getElementById("fileNota").addEventListener("change", getUrl);
 function getUrl() {
   if (this.files && this.files[0]) {
-      debugger
+      //debugger
     var FR= new FileReader();
     FR.addEventListener("load", function(e) {
       document.getElementById("imgDocente").src  = e.target.result;
@@ -19,8 +21,8 @@ $agregarNota.addEventListener('click',()=>{
     var t = new Date;
     let fecha = `${t.getFullYear()}-${t.getMonth()+1}-${t.getDate()}`
 
-    // const url = 'https://diarionuevonorte.herokuapp.com/api/IngresarNota'
-    const url = 'http://localhost:3000/api/IngresarNota'
+    const url = `${direccionURL}/api/IngresarNota`
+
         const data = {};
         data.titulo = document.getElementById('tituloNota').value
         data.subtitulo = document.getElementById('subtituloNota').value

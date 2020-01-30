@@ -1,6 +1,8 @@
 const $Dia = document.getElementById('Dia')
 const $Hora = document.getElementById('Hora')
 const $Mes = document.getElementById('Mes')
+
+
 // alert(`${dates.getHours()} : ${dates.getMinutes()} : ${dates.getSeconds()}`)
 let dates = new Date();
 let $mes =  dates.getMonth()

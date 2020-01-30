@@ -1,11 +1,14 @@
+// let direccionURLL = 'https://diarionuevonorte.herokuapp.com';
+let direccionURLL = 'http://localhost:3000';
+
 (async function cargarPublicidades(){
     async function getPublicidades(url) {
         const response = await fetch(url);
         const data = await response.json();
         return data;
     }
-    // const $listaPublicidades= await getPublicidades(`https://diarionuevonorte.herokuapp.com/api/obtenerPublicidades`);
-    const $listaPublicidades= await getPublicidades(`http://localhost:3000/api/obtenerPublicidades`);
+    const $listaPublicidades= await getPublicidades(`${direccionURLL}/api/obtenerPublicidades`);
+    // const $listaPublicidades= await getPublicidades(`http://localhost:3000/api/obtenerPublicidades`);
     // debugger
     function PortadaItemTemplate(publicidad){
         // debugger

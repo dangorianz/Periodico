@@ -1,16 +1,19 @@
+// let direccionURLS = 'https://diarionuevonorte.herokuapp.com';
+let direccionURLS = 'http://localhost:3000';
+
 (async function cargarUltimasNoticias(){
     async function getUltimasNoticias(url) {
         const response = await fetch(url);
         const data = await response.json();
         return data;
     }
-    // const $listaNoticias= await getUltimasNoticias(`https://diarionuevonorte.herokuapp.com/api/obtenerUltimasCincoSantaCruz`);
-    const $listaNoticias= await getUltimasNoticias(`http://localhost:3000/api/obtenerUltimasCincoSantaCruz`);
+    const $listaNoticias= await getUltimasNoticias(`${direccionURLS}/api/obtenerUltimasCincoSantaCruz`);
+    // const $listaNoticias= await getUltimasNoticias(`http://localhost:3000/api/obtenerUltimasCincoSantaCruz`);
     // debugger
     function NoticiasItemTemplate(noticia){
         return `<div class="item">
         <h6>${noticia.nombrecategoria}</h6>
-        <img class="imgUltimaNoticia" src='img/ultimaNoticia.png'>
+        <img class="imgUltimaNoticia" src='../img/ultimaNoticia.png'>
         <a href="nodos/noticia.html">
             <img src="${noticia.fotografia}" alt="">
             <h4>${noticia.titulo}</h4>
@@ -60,8 +63,8 @@
         const data = await response.json();
         return data;
     }
-    // const $listaNotas= await getUltimaEditorial(`https://diarionuevonorte.herokuapp.com/api/obtenerUltimaEditorial`);
-    const $UltimaEditorial= await getUltimaEditorial(`http://localhost:3000/api/obtenerUltimaEditorial`);
+    const $UltimaEditorial= await getUltimaEditorial(`${direccionURLS}/api/obtenerUltimaEditorial`);
+    // const $UltimaEditorial= await getUltimaEditorial(`http://localhost:3000/api/obtenerUltimaEditorial`);
     console.log($UltimaEditorial)
 
 
@@ -83,8 +86,8 @@
         const data = await response.json();
         return data;
     }
-    // const $listaNotas= await getURL(`https://diarionuevonorte.herokuapp.com/api/obtenerURL`);
-    const $URL= await getURL(`http://localhost:3000/api/obtenerURL`);
+    const $URL= await getURL(`${direccionURLS}/api/obtenerURL`);
+    // const $URL= await getURL(`http://localhost:3000/api/obtenerURL`);
     console.log($URL)
         document.getElementById('URLvideo').src=$URL.data[0].url;
     
@@ -96,8 +99,8 @@
         const data = await response.json();
         return data;
     }
-    // const $listaNotas= await getOtrasNotas(`https://diarionuevonorte.herokuapp.com/api/obtenerOtrasNotasSantaCruz`);
-    const $listaNotas= await getOtrasNotas(`http://localhost:3000/api/obtenerOtrasNotasSantaCruz`);
+    const $listaNotas= await getOtrasNotas(`${direccionURLS}/api/obtenerOtrasNotasSantaCruz`);
+    // const $listaNotas= await getOtrasNotas(`http://localhost:3000/api/obtenerOtrasNotasSantaCruz`);
     // debugger
     function NotaItemTemplate(nota){
         return `<div class="noticia">

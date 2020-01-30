@@ -5,14 +5,17 @@ document.getElementById('subtituloNota').textContent=sessionStorage.getItem('sub
 document.getElementById('textNotaLarga').textContent=sessionStorage.getItem('notalarga');
 // document.getElementById('tituloNota').textContent=sessionStorage.getItem('titulo');
 
+// let direccionURL = 'https://diarionuevonorte.herokuapp.com';
+let direccionURL = 'http://localhost:3000';
+
 (async function cargarComentarios(){
     async function getComentarios(url) {
         const response = await fetch(url);
         const data = await response.json();
         return data;
     }
-    // const $listaComentarios= await getComentarios(`https://diarionuevonorte.herokuapp.com/api/obtenerCometarios/${sessionStorage.getItem('idnoticia')}`);
-    const $listaComentarios= await getComentarios(`http://localhost:3000/api/obtenerCometarios/${sessionStorage.getItem('idnoticia')}`);
+    const $listaComentarios= await getComentarios(`${direccionURL}/api/obtenerCometarios/${sessionStorage.getItem('idnoticia')}`);
+    // const $listaComentarios= await getComentarios(`http://localhost:3000/api/obtenerCometarios/${sessionStorage.getItem('idnoticia')}`);
     // debugger
     function ComentariosItemTemplate(comentario){
         return `<div class="comentario">
@@ -59,8 +62,8 @@ document.getElementById('btnComentar').addEventListener('click',()=>{
     var t = new Date;
     let fecha = `${t.getFullYear()}-${t.getMonth()+1}-${t.getDate()}`
 
-    // const url = 'https://diarionuevonorte.herokuapp.com/api/IngresarComentario'
-    const url = 'http://localhost:3000/api/IngresarComentario'
+    const url = `${direccionURL}/api/IngresarComentario`
+    // const url = 'http://localhost:3000/api/IngresarComentario'
         const data = {};
         data.texto = document.getElementById('comentarioNoticia').value
         data.nombrepersona = document.getElementById('nombreC').value

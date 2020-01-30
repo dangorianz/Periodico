@@ -3,14 +3,17 @@ document.getElementById('dateEditorial').textContent=sessionStorage.getItem('fec
 document.getElementById('descEditorial').textContent=sessionStorage.getItem('descripcionEditorial');
 document.getElementById('fraEditorial').textContent=sessionStorage.getItem('fraseEditorial');
 
+// let direccionURL = 'https://diarionuevonorte.herokuapp.com';
+let direccionURL = 'http://localhost:3000';
+
 (async function cargarEditoriales(){
     async function getEditoriales(url) {
         const response = await fetch(url);
         const data = await response.json();
         return data;
     }
-    // const $listaComentarios= await getEditoriales(`https://diarionuevonorte.herokuapp.com/api/obtenerCometarios/${sessionStorage.getItem('idnoticia')}`);
-    const $listaEditoriales= await getEditoriales(`http://localhost:3000/api/obtenerEditoriales`);
+    const $listaEditoriales= await getEditoriales(`${direccionURL}/api/obtenerEditoriales`);
+    // const $listaEditoriales= await getEditoriales(`http://localhost:3000/api/obtenerEditoriales`);
     // debugger
     function EditorialesItemTemplate(editorial){
         return `<div style="margin-bottom:25px;" class="card">
@@ -65,8 +68,8 @@ document.getElementById('btnAgregarEditorial').addEventListener('click',()=>{
     var t = new Date;
     let fecha = `${t.getFullYear()}-${t.getMonth()+1}-${t.getDate()}`
 
-    // const url = 'https://diarionuevonorte.herokuapp.com/api/InsertarEditorial'
-    const url = 'http://localhost:3000/api/InsertarEditorial'
+    const url = `${direccionURL}/api/InsertarEditorial`
+    // const url = 'http://localhost:3000/api/InsertarEditorial'
         const data = {};
         data.titulo = document.getElementById('tituloEditorial').value
         data.descripcion = document.getElementById('descripcionEditorial').value
