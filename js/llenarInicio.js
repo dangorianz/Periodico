@@ -1,5 +1,5 @@
-// let direccionURLINI = 'https://diarionuevonorte.herokuapp.com';
-let direccionURLINI = 'http://localhost:3000';
+let direccionURLINI = 'https://diarionuevonorte.herokuapp.com';
+// let direccionURLINI = 'http://localhost:3000';
 
 (async function cargarUltimasNoticias(){
     async function getUltimasNoticias(url) {
@@ -13,7 +13,7 @@ let direccionURLINI = 'http://localhost:3000';
     function NoticiasItemTemplate(noticia){
         return `<div class="item">
                     <h6>${noticia.nombrecategoria}</h6>
-                    <img class="imgUltimaNoticia" src='img/ultimaNoticia.png'>
+                     <img class="imgUltimaNoticia" src='img/ultimaNoticia.png'>
                     <a href="nodos/noticia.html">
                         <img src="${noticia.fotografia}" alt="">
                         <h4>${noticia.titulo}</h4>

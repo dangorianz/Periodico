@@ -1,5 +1,5 @@
-// let direccionURLAg = 'https://diarionuevonorte.herokuapp.com';
-let direccionURLAg = 'http://localhost:3000';
+let direccionURLAg = 'https://diarionuevonorte.herokuapp.com';
+// let direccionURLAg = 'http://localhost:3000';
 const $agregarNota = document.getElementById('agregarNota')
 
 let fotoNota

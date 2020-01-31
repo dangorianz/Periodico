@@ -1,8 +1,8 @@
 const $btnAgregarEmpresa = document.getElementById('btnAgregarEmpresa')
 const $btnAgregarPublicidad = document.getElementById('btnAgregarPublicidad')
 
-// let direccionURLPu = 'https://diarionuevonorte.herokuapp.com';
-let direccionURLPu = 'http://localhost:3000';
+let direccionURLPu = 'https://diarionuevonorte.herokuapp.com';
+// let direccionURLPu = 'http://localhost:3000';
 
 let fotoPublicidad
 document.getElementById("filePublicidad").addEventListener("change", getUrl);

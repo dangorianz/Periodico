@@ -1,5 +1,5 @@
-// let direccionURLSO = 'https://diarionuevonorte.herokuapp.com';
-let direccionURLSO = 'http://localhost:3000';
+let direccionURLSO = 'https://diarionuevonorte.herokuapp.com';
+// let direccionURLSO = 'http://localhost:3000';
 
 (async function cargarUltimasNoticias(){
     async function getUltimasNoticias(url) {

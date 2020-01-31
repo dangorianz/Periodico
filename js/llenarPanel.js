@@ -1,5 +1,5 @@
-// let direccionURLPA = 'https://diarionuevonorte.herokuapp.com';
-let direccionURLPA = 'http://localhost:3000';
+let direccionURLPA = 'https://diarionuevonorte.herokuapp.com';
+// let direccionURLPA = 'http://localhost:3000';
 
 (async function cargarPanel(){
     async function getPanel(url) {

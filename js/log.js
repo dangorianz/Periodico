@@ -1,6 +1,6 @@
 $LogIn = document.getElementById('LogIn');
-// let direccionURLLOG = 'https://diarionuevonorte.herokuapp.com';
-let direccionURLLOG = 'http://localhost:3000';
+let direccionURLLOG = 'https://diarionuevonorte.herokuapp.com';
+// let direccionURLLOG = 'http://localhost:3000';
 
 async function logear(nombreUsuario, passUsuario){
     async function getData(url) {

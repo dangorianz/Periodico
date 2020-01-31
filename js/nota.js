@@ -5,8 +5,8 @@ document.getElementById('subtituloNota').textContent=sessionStorage.getItem('sub
 document.getElementById('textNotaLarga').textContent=sessionStorage.getItem('notalarga');
 // document.getElementById('tituloNota').textContent=sessionStorage.getItem('titulo');
 
-// let direccionURLNOTA = 'https://diarionuevonorte.herokuapp.com';
-let direccionURLNOTA = 'http://localhost:3000';
+let direccionURLNOTA = 'https://diarionuevonorte.herokuapp.com';
+// let direccionURLNOTA = 'http://localhost:3000';
 
 (async function cargarComentarios(){
     async function getComentarios(url) {

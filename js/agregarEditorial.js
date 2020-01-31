@@ -1,8 +1,3 @@
-document.getElementById('titleEditorial').textContent=sessionStorage.getItem('tituloEditorial');
-document.getElementById('dateEditorial').textContent=sessionStorage.getItem('fechaEditorial');
-document.getElementById('descEditorial').textContent=sessionStorage.getItem('descripcionEditorial');
-document.getElementById('fraEditorial').textContent=sessionStorage.getItem('fraseEditorial');
-
 let direccionURLEDI = 'https://diarionuevonorte.herokuapp.com';
 // let direccionURLEDI = 'http://localhost:3000';
 

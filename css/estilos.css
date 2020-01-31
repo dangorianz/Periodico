@@ -112,21 +112,22 @@
     background: grey;
     position: relative;
 }
-.section .container .ultimasNoticias .item:nth-of-type(1) a h4{
-    font-size: 25px;
-}
 .section .container .ultimasNoticias .item a h4{
     text-shadow: -2px 4px 3px #222930;
     color: white;
     font-weight: 900;
+    font-size: 15px;
     /* -webkit-text-stroke: px black; */
 }
+.section .container .ultimasNoticias .item:nth-of-type(1) a h4{
+    font-size: 25px;
+}
 .section .container .ultimasNoticias .item a h4:hover{
-
     color: #C21812;
 }
 .section .container .ultimasNoticias .item:nth-of-type(1){
     /* background: blue; */
+    max-height: 500px;
     grid-column-start: 1;
     grid-column-end: 3; 
     grid-row-start: 1;
@@ -135,8 +136,10 @@
 .section .container .ultimasNoticias .item img{
     width: 100%;
     height: 100%;
+    max-height: 500px;
     /* position: relative; */
 }
+
 .section .container .ultimasNoticias .item h6{
     position: absolute;
     top: 5%;
@@ -312,17 +315,23 @@
     border-radius: 40%;
     padding: 5px;
 }
-.footer .container .redes a .icon-twitter:hover{
+.footer .container .redes a .icon-twitter:hover {
     background: #00acee;
 }
-.footer .container .redes a .icon-facebook:hover{
+.footer .container .redes a .icon-facebook:hover {
     background: #3b5998;
 }
-.footer .container .redes a .icon-linkedin:hover{
+.footer .container .redes a .icon-linkedin:hover {
     background: #0e76a8;
 }
-.footer .container .redes a .icon-instagram:hover{
+.footer .container .redes a .icon-instagram:hover {
     background: #3f729b;
+}
+.footer .container .redes a .icon-whatsapp:hover {
+    background: #00bb2d;
+}
+.footer .container .redes a .icon-youtube:hover {
+    background: #c4302b;
 }
 .footer .container .btnVisitanos{
     padding: 10px 20px;

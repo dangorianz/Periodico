@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="css/icon-twitter.css">
     <link rel="stylesheet" href="css/estilos.css">
-    <link rel="shortcut icon" href="img/Zona Norte blanco.ico" />
+    <link rel="shortcut icon" href="img/icono.ico" />
     <title>Zona Norte | Portada</title>
 </head>
 <body>
@@ -21,12 +21,12 @@
                     <h6 id="Hora">Hora</h6>
                 </div>
                 <div class="logos" >
-                <a class="twitter" href="#"><i class="icon-twitter"></i></a>
-                <a class="facebook" href="https://www.facebook.com/diariozonanorte.2020/"><i class="icon-facebook"></i></a>
-                <a class="whatsapp" href="#"><i class="icon-whatsapp"></i></a>
-                <a class="linkedin" href="#"><i class="icon-linkedin"></i></a>
-                <a class="youtube" href="#"><i class="icon-youtube"></i></a>
-                <a class="instagram" href="#"><i class="icon-instagram"></i></a>
+                  <a class="twitter" target="_blank" href="https://twitter.com/zonanorte2020"><i class="icon-twitter"></i></a>
+                  <a class="facebook" target="_blank" href="https://www.facebook.com/diariozonanorte.2020/"><i class="icon-facebook"></i></a>
+                  <a class="whatsapp" href="#"><i class="icon-whatsapp"></i></a>
+                  <a class="linkedin" target="_blank" href="https://www.linkedin.com/feed/?trk=onboarding-landing"><i class="icon-linkedin"></i></a>
+                  <a class="youtube" target="_blank" href="https://www.youtube.com/channel/UCDy-dzRmYKfC3LWi5uag8wQ?view_as=subscriber"><i class="icon-youtube"></i></a>
+                  <a class="instagram" target="_blank" href="https://www.instagram.com/zonanortes2020/"><i class="icon-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -68,7 +68,7 @@
                   </div>
             </div>
         </div>
-    </div>
+    </section>
     <section class="section">
         <div class="container" style="padding: 0;">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -131,6 +131,7 @@
             <div id="contBtnAgregarNota">
               <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Agregar Nueva Nota</button>
               <a href="nodos/publicidades.html" class="btn btn-outline-success">Agregar Publicidad</a>
+              <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#ModalEditorial" data-whatever="@mdo">Agregar Editorial</button>
             </div>
             <!---->
             <div id="masNoticias" class="masNoticias">
@@ -283,6 +284,39 @@ vertical-align: text-bottom;"><div style="margin-right: 2%;" class="circulo"></d
         </div>
       </div>
     </div>
+    <!--MODAL DEL EDITORIAL-->
+    <div class="modal fade" id="ModalEditorial" tabindex="-1" role="dialog" aria-labelledby="ModalEditorialLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Nueva Editorial</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Titulo</label>
+                <input type="text" class="form-control" style="font-weight: bold;" id="tituloEditorial">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label">contenido:</label>
+                <textarea class="form-control" id="descripcionEditorial"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label">Frase relevante:</label>
+                <textarea class="form-control" style="font-weight: bold;" id="fraseEditorial"></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-success" id="btnAgregarEditorial">Agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -331,12 +365,12 @@ vertical-align: text-bottom;"><div style="margin-right: 2%;" class="circulo"></d
               Nombre: <span><a href="">email@gmail.com</a> </span>
             </p>
             <div class="redes">
-              <a class="twitter" href="#"><i class="icon-twitter"></i></a>
-              <a class="facebook" href="https://www.facebook.com/diariozonanorte.2020/"><i class="icon-facebook"></i></a>
+              <a class="twitter" target="_blank" href="https://twitter.com/zonanorte2020"><i class="icon-twitter"></i></a>
+              <a class="facebook" target="_blank" href="https://www.facebook.com/diariozonanorte.2020/"><i class="icon-facebook"></i></a>
               <a class="whatsapp" href="#"><i class="icon-whatsapp"></i></a>
-              <a class="linkedin" href="#"><i class="icon-linkedin"></i></a>
-              <a class="youtube" href="#"><i class="icon-youtube"></i></a>
-              <a class="instagram" href="#"><i class="icon-instagram"></i></a>
+              <a class="linkedin" target="_blank" href="https://www.linkedin.com/feed/?trk=onboarding-landing"><i class="icon-linkedin"></i></a>
+              <a class="youtube" target="_blank" href="https://www.youtube.com/channel/UCDy-dzRmYKfC3LWi5uag8wQ?view_as=subscriber"><i class="icon-youtube"></i></a>
+              <a class="instagram" target="_blank" href="https://www.instagram.com/zonanortes2020/"><i class="icon-instagram"></i></a>
             </div>
             
           </div>
@@ -359,5 +393,6 @@ vertical-align: text-bottom;"><div style="margin-right: 2%;" class="circulo"></d
     <script src="js/log.js"></script>
     <script src="js/verificarUsuario.js"></script>
     <script src="js/llenarPublicidad.js"></script>
+    <script src="js/agregarEditorial.js"></script>
 </body>
 </html>
