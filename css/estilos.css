@@ -140,6 +140,16 @@
     /* position: relative; */
 }
 
+.containerLogopubli .container .row .col.col-8{
+    background: #e0e0e0;
+    padding: 0;
+    height: inherit;
+    width: 100%;
+    height: 150px;
+}
+.containerLogopubli .container .row .col.col-8 .imgCarousel{
+    height: 150px;
+}
 .section .container .ultimasNoticias .item h6{
     position: absolute;
     top: 5%;
@@ -303,6 +313,9 @@
     color: white;
     padding-left: 20px;
 }
+.footer .container .correos{
+    padding: 0;
+}
 .footer .container .redes{
     padding-left: 20px;
     /* text-align: center; */
@@ -357,4 +370,164 @@
         background: rgba(120, 0, 0, 0.666);
     }
 }
-/**/
+
+
+
+/*Responsive*/
+
+@media screen and (max-width: 1024px) {
+    
+  }
+  
+  @media screen and (max-width: 768px) {
+    
+    
+  }
+  
+  @media screen and (max-width: 480px) {
+    
+  }
+  
+  @media screen and (max-width: 360px) {
+      /*HEADER*/
+    .containerClimaTiempo{
+        height: 35px;
+    }
+    .containerClimaTiempo .container{
+        height: inherit;
+    }
+    .containerClimaTiempo .container .ClimaTiempo{
+        height: inherit;
+        justify-content: flex-end;
+    }
+    .containerClimaTiempo .container .ClimaTiempo .time{
+        display: none;
+    }
+    .containerClimaTiempo .container .ClimaTiempo .logos a{
+        font-size: 12px;
+    }
+    /*============================*/
+    /*PORTADA*/
+    .containerLogopubli .container .row{
+        /* display: block; */
+    }
+    .containerLogopubli .container .row .col.col-4, .col.col-8{
+        width: 100%;
+        padding: 0;
+    }
+    .containerLogopubli .container .row .col.col-8{
+        height: 100px;
+    }
+    .containerLogopubli .container .row .col.col-8 .imgCarousel{
+        height: 100px;
+        width: 100%;
+    }
+    .containerLogopubli .container figure img{
+        height: 80px;
+    }
+    /*============================*/
+    /*MENU*/
+    /*============================*/
+    /*5 primeras*/
+    .main .publiDerecha img{
+        display: none;
+
+    }
+    .main .publiIzquierda img{
+        display: none;
+    }
+    .section .ultimasNoticias{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .section .container .ultimasNoticias .item a h4{
+        font-size: 12px;
+    }
+    .section .container .ultimasNoticias .item:nth-of-type(1) a h4{
+        font-size: 16px;
+    }
+    .section .container .ultimasNoticias .item .imgNoticia{
+        max-height: 200px;
+        min-height: 200px;
+    }
+    .section .container .ultimasNoticias .item .imgUltimaNoticia{
+        height: 15%;
+    }
+    /*============================*/
+    
+    /*Main*/
+    .main .container{
+        padding: 0;
+    }
+    .main .container .row{
+        display: block;
+        margin: 0;
+    }
+    .main .container .row .col.col-8{
+        width: 100%;
+        max-width: 100%;
+    }
+    .main .container .row .col.col-8 h1{
+        margin: 0 20px;
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .main .container .masNoticias{
+        padding: 0px 15px;
+    }
+    .main .container .masNoticias .noticia{
+        display: initial;
+    }
+    .main .container .masNoticias .noticia .InfoNoti h4{
+        font-size: 18px;
+        padding: 5px 0;
+        margin: 0;
+    }
+    .main .container .masNoticias .noticia .InfoNoti h6{
+        /* padding: 10px; */
+        display: none;
+    }
+    .main .container .masNoticias .noticia .InfoNoti small{
+        font-weight: bold;
+        font-style: oblique;   
+    }
+    .main .container .masNoticias .noticia .InfoNoti h5{
+        float: right;
+    }
+    .main .container .masNoticias .noticia .InfoNoti p{
+        font-size: 12px;
+    }
+    .main .container .masNoticias .noticia .InfoNoti em{
+        padding: 5px 0;
+        text-decoration: none !important;
+    }
+    
+    .main .container .row .col.col-4{
+        max-width: 100%;
+        width: 100%;
+    }
+    /*============================*/
+
+    /*FOOOTER*/
+    .footer {
+        padding: 5px;
+    }
+    .footer .container img{
+        width: 100%%;
+    }
+    .footer .container{
+        padding: 0;
+    }
+    .footer .container .row{
+        margin: 0;
+    }
+    .footer .container .row .col.col-4{
+        padding: 0;
+        max-width: 100%;
+        flex: auto;
+        width: 100%;
+    }
+    .footer .container .row .col.col-4 .correos a{
+        font-size: 12px;
+    }
+    /*============================*/
+}

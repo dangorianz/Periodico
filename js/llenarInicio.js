@@ -15,7 +15,7 @@ let direccionURLINI = 'https://diarionuevonorte.herokuapp.com';
                     <h6>${noticia.nombrecategoria}</h6>
                      <img class="imgUltimaNoticia" src='img/ultimaNoticia.png'>
                     <a href="nodos/noticia.html">
-                        <img src="${noticia.fotografia}" alt="">
+                        <img class="imgNoticia" src="${noticia.fotografia}" alt="">
                         <h4>${noticia.titulo}</h4>
                         <p class="quienPublico">por ${noticia.nombres} ${noticia.apellidos}</p>
                     </a>
@@ -99,7 +99,7 @@ let direccionURLINI = 'https://diarionuevonorte.herokuapp.com';
                         <h6 style="font-weight: bold;">${nota.subtitulo}</h6>
                         <small>${nota.fecha.substr(0,10)}</small>
                         <h5>${nota.nombrecategoria}</h5>
-                        <p>${nota.texto}</p>
+                        <p>${nota.texto.substr(0,200)}</p>
                         <em style="display:block; font-size:12px; font-weight:bold; text-decoration: underline;">por: ${nota.nombres} ${nota.apellidos}</em>
                     </div>
                     <hr>
