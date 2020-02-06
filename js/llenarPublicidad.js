@@ -13,7 +13,7 @@ let direccionURLL = 'https://diarionuevonorte.herokuapp.com';
     function PortadaItemTemplate(publicidad){
         // debugger
         return `<div class="carousel-item ">
-                    <img class="imgCarousel" src="${publicidad.foto}" class="d-block w-100" alt="...">
+                    <img src="${publicidad.foto}" class="d-block w-100" alt="..." style="height:150px">
                 </div>`;
     }
     function createTemplate(HTMLString){

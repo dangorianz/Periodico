@@ -38,9 +38,7 @@
     padding: 0 10px;
     margin: 10px 0;
 }
-.main .container .masNoticias .containerComentarios{
-    
-}
+
 .main .container .masNoticias .containerComentarios .comentario{
     display: grid;
     grid-template-columns: 20% 70%;
