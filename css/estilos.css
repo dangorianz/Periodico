@@ -72,6 +72,9 @@
 .containerClimaTiempo .container .ClimaTiempo .logos .whatsapp{
     background: #00bb2d;
 }
+.carousel-item .imagenesCarousel{
+    height: 150px;
+}
 /*--------------------------*/
 .containerLogopubli{
     width: 100%;
@@ -105,13 +108,14 @@
 .section .ultimasNoticias{
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
     row-gap: 5px;
     column-gap: 5px;
 }
 .section .container .ultimasNoticias .item{
     background: grey;
     position: relative;
-    max-height: 250px;
+    max-height: 248px;
     overflow: hidden;
 }
 .section .container .ultimasNoticias .item a h4{
@@ -142,7 +146,7 @@
     /* position: relative; */
 }
 .section .container .ultimasNoticias .item .imagenesUltimasCinco:nth-of-type(1){
-    /* max-height: 250px; */
+    max-height: 500px;
 }
 
 .section .container .ultimasNoticias .item h6{

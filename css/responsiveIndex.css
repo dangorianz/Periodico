@@ -1,15 +1,210 @@
 @media screen and (max-width:1200px){
-
+    .main .publiIzquierda,.publiDerecha{
+        display: none;
+    }
 }
 @media screen and (max-width:1024px){
+    .section .container .ultimasNoticias .item{
+        max-height: 197px;
+    }
+    .section .container .ultimasNoticias .item:nth-of-type(1){
+        max-height: 400px;
+    }
+    .section .container .ultimasNoticias .item .quienPublico{
+        font-size: 10px;
+    }
+    .container, .container-md, .container-sm {
+        max-width: 90%;
 
+    }
+    .main .container .masNoticias .noticia{
+        display: initial;
+    }
+    .main .container .masNoticias .noticia img{
+        padding: 20px;
+        /* border-radius: 10px; */
+    }
+    .main .container .card .card-header h2{
+     font-size: 22px;   
+     padding: 6px 0;
+    }
+    .section .container .ultimasNoticias .item h4{
+        bottom: 15%;
+    }
+    .section .container .ultimasNoticias .item:nth-of-type(1) a h4{
+        bottom: 8%;
+    }
+    .main .container .col.col-4 .card-body{
+        padding: 5px;
+    }
+    .input-group>.input-group-append>.btn, .input-group>.input-group-append>.input-group-text, .input-group>.input-group-prepend:first-child>.btn:not(:first-child), .input-group>.input-group-prepend:first-child>.input-group-text:not(:first-child), .input-group>.input-group-prepend:not(:first-child)>.btn, .input-group>.input-group-prepend:not(:first-child)>.input-group-text{
+        font-size: 10px;
+    }
+    .btn.btn-link{
+        padding: 0;
+    }
+    #tEditorial{
+        padding: 0 10px;
+    }
+    #dEditorial{
+        padding: 0 10px;
+        font-size: 15px;
+    }
 }
 @media screen and (max-width:768px){
+    .container, .container-md, .container-sm{
+        max-width: 100%;
+    }
+    .carousel-item .imagenesCarousel{
+        height: 100px;
+        width: 100%;
+    }
+    .section .container .ultimasNoticias .item{
+        grid-column-start: 3;
+        grid-column-end: 5; 
+        max-height: 200px;
+    }
+    .section .container .ultimasNoticias .item:nth-of-type(1){
+        /* background: blue; */
+        /* max-height: 300px; */
+        grid-column-start: 1;
+        grid-column-end: 3;       
+    }
+    .section .container .ultimasNoticias .item:nth-of-type(4){
+        /* background: blue; */
+        
+        grid-column-start: 1;
+        grid-column-end: 3; 
+    }
+    .section .container .ultimasNoticias .item .imagenesUltimasCinco:nth-of-type(1){
+        max-height: 200px;
+    }
+    .section .container .ultimasNoticias .item:nth-of-type(1) .imagenesUltimasCinco{
+        max-height: 400px;
+    }
+    .section .container .ultimasNoticias .item:nth-of-type(1) .quienPublico{
+        font-size: 12px;
+    }
+    .containerClimaTiempo .container .ClimaTiempo .time h6{
+        font-size: 11px;
+    }
+    .main .container .row{
+        display: initial;
+    }
+    .main .container .row .col.col-8{
+        max-width: 100%;
+    }
+    .main .container .row .col.col-4{
+        
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 5px;
+        max-width: 100%;
+    }
+    .main .container .row .col.col-4 .card{
+        margin-bottom: 20px;
+    }
+    .main .container .row .col.col-4 .card.videoCard{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .main .container .row .col.col-4 .accordion{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        
+    }
 
+    .footer .container .row{
+        display: grid;
+        max-width: 100%;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 10px;
+        margin:0;
+    }
+    .footer .container .row .col.col-4{
+        max-width: 100%;
+        padding: 0;
+        /* min-width: 100%; */
+        
+    }
+    .footer .container .row .col.col-4:nth-of-type(1){
+        grid-column-start:1 ;
+        grid-column-end: 3;
+    }
+    .footer .container .row .col.col-4 p{
+        padding: 0;
+    }
+    
 }
+
 @media screen and (max-width:480px){
+    .footer .container .row {
+        display: initial;
+        
+        margin: 0;
+    }
 
+    .main .container{
+        padding: 0;
+    }
+    .main .container .row .col.col-8 h1{
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .main .container .masNoticias .noticia img{
+        padding: 0;
+    }
+    .main .container .masNoticias .noticia .InfoNoti h4{
+        font-size: 20px;
+        margin-top: 5px;
+    }
+    .main .container .masNoticias .noticia .InfoNoti h6{
+        font-size: 14px;
+    }
+    .main .container .row .col.col-4{
+        
+        display: initial;
+        max-width: 100%;
+    }
+    .section .ultimasNoticias{
+        display: initial;
+    }
+    .containerLogopubli .container{
+        padding: 0;
+    }
+    .containerLogopubli .container .row{
+        display: initial;
+        margin: 0;
+    }
+    .containerLogopubli .container .row .col.col-4{
+        padding: 0;
+        max-width: 100%;
+    }
+    .containerLogopubli .container .row .col.col-8{
+        padding: 0;
+        max-width: 100%;
+        
+    }
+    .containerClimaTiempo{
+        height: auto;
+    }
+    .containerClimaTiempo .container .ClimaTiempo{
+        justify-content: space-around;
+    }
+    .containerClimaTiempo .container .ClimaTiempo .time h6{
+        font-size: 8px;
+    }
+    .containerClimaTiempo .container .ClimaTiempo .logos a{
+        font-size: 10px;
+    }
+    .carousel-item .imagenesCarousel{
+        height: 150px;
+    }
+    .containerClimaTiempo .container .ClimaTiempo .time{
+        display: none;
+    }
 }
+
 @media screen and (max-width:320px){
 
 }
