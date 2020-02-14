@@ -1,0 +1,175 @@
+@media screen and (max-width:1200px){
+    .main .publiIzquierda,.publiDerecha{
+        display: none;
+    }
+}
+@media screen and (max-width:1024px){
+    .container, .container-md, .container-sm {
+        max-width: 90%;
+
+    }   
+    .main .container .card .card-header h2{
+     font-size: 22px;   
+     padding: 6px 0;
+    }
+    .main .container .masNoticias img {
+        width: 100%;
+        padding: 0px;
+    }
+    .main .container .masNoticias p {
+        padding: 0px 20px;
+    }
+}
+@media screen and (max-width:768px){
+    .container, .container-md, .container-sm{
+        max-width: 100%;
+    }
+    .carousel-item .imagenesCarousel{
+        height: 100px;
+        width: 100%;
+    }
+    
+    .containerClimaTiempo .container .ClimaTiempo .time h6{
+        font-size: 11px;
+    }
+    .main .container .row{
+        display: initial;
+    }
+    .main .container .row .col.col-8{
+        max-width: 100%;
+    }
+    .main .container .row .col.col-4{
+        
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 5px;
+        max-width: 100%;
+    }
+    .main .container .row .col.col-4 .card{
+        margin-bottom: 20px;
+    }
+    .main .container .row .col.col-4 .card.videoCard{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .main .container .row .col.col-4 .accordion{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        
+    }
+    .main .container .row .col.col-8 h1 {
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .main .container .masNoticias .containerRedesSociales {
+        /* margin-top: 20px; */
+        padding-left: 0;
+    }
+
+    .footer .container .row{
+        display: grid;
+        max-width: 100%;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 10px;
+        margin:0;
+    }
+    .footer .container .row .col.col-4{
+        max-width: 100%;
+        padding: 0;
+        /* min-width: 100%; */
+        
+    }
+    .footer .container .row .col.col-4:nth-of-type(1){
+        grid-column-start:1 ;
+        grid-column-end: 3;
+    }
+    .footer .container .row .col.col-4 p{
+        padding: 0;
+    }
+    
+}
+
+@media screen and (max-width:480px){
+    .footer .container .row {
+        display: initial;
+        
+        margin: 0;
+    }
+
+    .main .container{
+        padding: 0;
+    }
+    .main .container .row .col.col-8 h1{
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .main .container .row .col.col-8 h3{
+        font-size: 20px;
+    }
+    .main .container .masNoticias p {
+        padding: 0px 10px;
+    }
+    
+    .main .container .row .col.col-4{
+        
+        display: initial;
+        max-width: 100%;
+    }
+    .section .ultimasNoticias{
+        display: initial;
+    }
+    .containerLogopubli .container{
+        padding: 0;
+    }
+    .containerLogopubli .container .row{
+        display: initial;
+        margin: 0;
+    }
+    .containerLogopubli .container .row .col.col-4{
+        padding: 0;
+        max-width: 100%;
+    }
+    .containerLogopubli .container .row .col.col-8{
+        padding: 0;
+        max-width: 100%;
+        
+    }
+    .containerLogopubli .container .row .col.col-8 .masNoticias #textNotaLarga{
+        font-size: 13px;
+    }
+    .containerLogopubli .container .row .col.col-8 .masNoticias h4{
+        font-size: 1.2rem;
+        padding-left: 15px;
+    }
+    .main .container .masNoticias .containerComentarios .comentario {
+        
+        grid-template-columns: 35% 55%;
+        
+    }
+    .main .container .masNoticias .containerComentarios .comentario .textoComentario p {
+        padding:0;
+        
+    }
+    .containerClimaTiempo{
+        height: auto;
+    }
+    .containerClimaTiempo .container .ClimaTiempo{
+        justify-content: space-around;
+    }
+    .containerClimaTiempo .container .ClimaTiempo .time h6{
+        font-size: 8px;
+    }
+    .containerClimaTiempo .container .ClimaTiempo .logos a{
+        font-size: 10px;
+    }
+    .carousel-item .imagenesCarousel{
+        height: 150px;
+    }
+    .containerClimaTiempo .container .ClimaTiempo .time{
+        display: none;
+    }
+}
+
+@media screen and (max-width:320px){
+
+}
