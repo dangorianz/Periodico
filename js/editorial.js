@@ -51,7 +51,7 @@ let direccionURLEDI = 'https://diarionuevonorte.herokuapp.com';
     }
     function renderEditorialesList(listEditorila, $container){
         listEditorila.data.forEach(editorial => {
-            debugger
+            // debugger
             
           const HTMLString = EditorialesItemTemplate(editorial);
           const editorialElement = createTemplate(HTMLString);
