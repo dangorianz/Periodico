@@ -81,6 +81,7 @@
 }
 .carousel-item .imagenesCarousel{
     height: 150px;
+    width: 100%;
 }
 /*--------------------------*/
 .containerLogopubli{

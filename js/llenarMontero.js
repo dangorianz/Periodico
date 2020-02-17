@@ -27,7 +27,6 @@ let direccionURLM = 'https://diarionuevonorte.herokuapp.com';
         return $html.body.children[0];
     }
     function addEventClick($element,$nota) {
-        debugger
         $element.addEventListener('click', () => {
             sessionStorage.setItem('idnoticia',`${$nota.idnoticia}`);
             sessionStorage.setItem('titulo',`${$nota.titulo}`);

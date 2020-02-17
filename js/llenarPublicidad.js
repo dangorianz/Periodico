@@ -21,21 +21,20 @@ let direccionURLL = 'https://diarionuevonorte.herokuapp.com';
         $html.body.innerHTML = HTMLString;
         return $html.body.children[0];
     }
-    function addEventClick($element,$nota) {
-        // debugger
-        $element.addEventListener('click', () => {
-            
-        })
-    }
+    
     function renderNotaList(listnota, $container){
+        // $container.children[0].remove();
         listnota.data.forEach(nota => {
             
-          const HTMLString = PortadaItemTemplate(nota);
-          const notaElement = createTemplate(HTMLString);
-
-          
-          $container.append(notaElement);
-        });    
+            const HTMLString = PortadaItemTemplate(nota);
+            const notaElement = createTemplate(HTMLString);
+            
+            
+            $container.append(notaElement);
+        }); 
+        // debugger
+        $container.children[0].remove();   
+        $container.children[0].classList.add('active');   
     }
     const $containerCarrousel = document.getElementById('containerCarrousel')
     renderNotaList($listaPublicidades, $containerCarrousel)
