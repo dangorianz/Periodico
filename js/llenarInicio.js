@@ -1,6 +1,36 @@
 let direccionURLINI = 'https://diarionuevonorte.herokuapp.com';
 // let direccionURLINI = 'http://localhost:3000';
 
+let fotoPortada
+document.getElementById("filePortada").addEventListener("change", getUrl);
+function getUrl() {
+  if (this.files && this.files[0]) {
+      //debugger
+    var FR= new FileReader();
+    FR.addEventListener("load", function(e) {
+      document.getElementById("fotoPortada").src  = e.target.result;
+      fotoPortada = e.target.result;
+    }); 
+    
+    FR.readAsDataURL( this.files[0] );
+  }
+}
+
+let filePortada
+document.getElementById("archivoPortada").addEventListener("change", getUrlA);
+function getUrlA() {
+  if (this.files && this.files[0]) {
+      //debugger
+    var FR= new FileReader();
+    FR.addEventListener("load", function(e) {
+    //   document.getElementById("fotoPortada").src  = e.target.result;
+      filePortada = e.target.result;
+    }); 
+    
+    FR.readAsDataURL( this.files[0] );
+  }
+}
+
 (async function cargarUltimasNoticias(){
     async function getUltimasNoticias(url) {
         const response = await fetch(url);
@@ -80,6 +110,20 @@ let direccionURLINI = 'https://diarionuevonorte.herokuapp.com';
         sessionStorage.setItem('fechaEditorial',`${$UltimaEditorial.data[0].fecha.substr(0,10)}`);    
         location.href="nodos/editorial.html"
     })
+})();
+(async function cargarPortada(){
+    async function getPortada(url) {
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+    }
+    const $portada= await getPortada(`${direccionURLINI}/api/obtenerPortada`);
+    // const $portada= await getPortada(`http://localhost:3000/api/obtenerportada`);
+    console.log($portada)
+
+
+    document.getElementById('fotoPortada').src=$portada.data[0].foto;
+    
 })();
 
 (async function cargarOtrasNotas(){
@@ -163,6 +207,32 @@ document.getElementById('urlActualizar').addEventListener('click',()=>{
     // const url = `http://localhost:3000/api/ActualizarTransmision/1`;
       let data = {};
       data.url=document.getElementById('urlText').value
+      // debugger
+     
+      // debugger
+      let JSO = JSON.stringify(data)
+    //   alert(JSO);
+    
+      fetch(url, {
+          method: 'PUT', // or 'PUT'
+          body: JSO, // data can be `string` or {object}!
+          headers:{
+              'Content-Type': 'application/json'
+          }
+      }).then(res => res.json())
+      .catch(error => console.error('Error:', error))
+      .then(response => location.reload()); 
+})
+
+
+document.getElementById('actualizarPortada').addEventListener('click',()=>{
+
+    const url = `${direccionURLINI}/api/ActualizarPortada/1`;
+    // const url = `http://localhost:3000/api/ActualizarTransmision/1`;
+      let data = {};
+      data.archivo=filePortada
+      data.foto= fotoPortada
+        
       // debugger
      
       // debugger

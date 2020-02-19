@@ -17,7 +17,7 @@ async function logear(nombreUsuario, passUsuario){
         sessionStorage.setItem('idUsuario',`${$listaRoles.data[0].idusu}`);
         sessionStorage.setItem('foto',`${$listaRoles.data[0].foto}`);
         sessionStorage.setItem('rol',`${$listaRoles.data[0].idrol}`);
-        location.href="../index.html";
+        location.href='../index.html';
     }else{
         alert(`Usuario o contraseña Incorrectos`)
     }

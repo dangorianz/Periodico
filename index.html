@@ -146,8 +146,31 @@
                 <h2 >Diario de Hoy</h2>
               </div>
               <div class="card-body">
-                <img class="" src="img/portada.jpeg" alt="">
+                <img id="fotoPortada" class="" src="img/portada.jpeg" alt="">
               </div>
+              <form id="formPortada"  onsubmit="return false;" action="">
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupFileAddon01">img</span>
+                  </div>
+                  <div class="custom-file">
+                    <label class="custom-file-label" for="inputGroupFile01">Escoge Imagen</label>
+                    <input type="file" class="custom-file-input" id="filePortada" aria-describedby="inputGroupFileAddon01">
+                  </div>
+                </div>
+                
+                <!-- <img id="" class="imgss" height="100"> -->
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroupFileAddon02">file</span>
+                  </div>
+                  <div class="custom-file">
+                    <label class="custom-file-label" for="inputGroupFile02">Escoge PDF</label>
+                    <input type="file" class="custom-file-input" id="archivoPortada" aria-describedby="inputGroupFileAddon01">
+                  </div>
+                </div>
+                <button id="actualizarPortada" class="btn btn-outline-dark">Actualizar</button>
+              </form>
             </div>
             <!-- <hr> -->
             <div id="cardEditorial" class="card">
